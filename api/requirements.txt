@@ -1,0 +1,12 @@
+# Datanaid Python ML microservice (Vercel Python runtime).
+# These power the OPTIONAL heavy forecasting endpoint at /api/forecast.
+# The app works fully without this function (TS linear forecast is the default).
+#
+# NOTE: Prophet + its compiled deps are large. If the Vercel build exceeds the
+# function size limit on the Hobby tier, comment out prophet/xgboost and the
+# endpoint will gracefully fall back to the pure-Python linear forecast.
+prophet==1.1.5
+pandas==2.2.2
+numpy==1.26.4
+xgboost==2.0.3
+scikit-learn==1.4.2

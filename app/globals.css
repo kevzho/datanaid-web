@@ -1,0 +1,249 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=satoshi@400,500,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Datanaid — "Turn nonprofit data into impact."
+       Confident emerald accent + warm neutral surfaces. */
+    --background: 40 30% 99%;
+    --foreground: 200 18% 14%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 18% 14%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 18% 14%;
+
+    /* Emerald — the impact accent */
+    --primary: 161 84% 30%;
+    --primary-foreground: 160 60% 98%;
+
+    --secondary: 165 22% 95%;
+    --secondary-foreground: 200 18% 20%;
+
+    --muted: 40 16% 95%;
+    --muted-foreground: 200 10% 42%;
+
+    --accent: 165 30% 93%;
+    --accent-foreground: 161 84% 24%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 64% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 33 92% 48%;
+    --warning-foreground: 30 40% 12%;
+
+    --border: 200 14% 90%;
+    --input: 200 14% 90%;
+    --ring: 161 84% 30%;
+
+    /* Chart palette — emerald-led, harmonious */
+    --chart-1: 161 84% 34%;
+    --chart-2: 199 78% 46%;
+    --chart-3: 33 92% 52%;
+    --chart-4: 261 52% 56%;
+    --chart-5: 339 70% 54%;
+
+    --font-display: "General Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Satoshi", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 200 26% 8%;
+    --foreground: 165 16% 92%;
+
+    --card: 200 24% 11%;
+    --card-foreground: 165 16% 92%;
+
+    --popover: 200 24% 11%;
+    --popover-foreground: 165 16% 92%;
+
+    --primary: 159 70% 46%;
+    --primary-foreground: 200 30% 8%;
+
+    --secondary: 200 16% 18%;
+    --secondary-foreground: 165 16% 92%;
+
+    --muted: 200 16% 16%;
+    --muted-foreground: 200 10% 62%;
+
+    --accent: 200 18% 20%;
+    --accent-foreground: 159 70% 60%;
+
+    --destructive: 0 62% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 56% 46%;
+    --success-foreground: 200 30% 8%;
+
+    --warning: 33 90% 56%;
+    --warning-foreground: 30 40% 10%;
+
+    --border: 200 14% 20%;
+    --input: 200 14% 22%;
+    --ring: 159 70% 46%;
+
+    --chart-1: 159 70% 50%;
+    --chart-2: 199 78% 58%;
+    --chart-3: 33 92% 60%;
+    --chart-4: 261 60% 70%;
+    --chart-5: 339 74% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv01";
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+  /* Tabular figures for all data surfaces */
+  .tabular-nums,
+  table,
+  .metric-value {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+}
+
+@layer utilities {
+  /* Webapp elevation system — never combine with overflow-hidden */
+  .hover-elevate {
+    @apply transition-colors duration-150;
+  }
+  .hover-elevate:hover {
+    background-image: linear-gradient(hsl(0 0% 0% / 0.03), hsl(0 0% 0% / 0.03));
+  }
+  .dark .hover-elevate:hover {
+    background-image: linear-gradient(hsl(0 0% 100% / 0.04), hsl(0 0% 100% / 0.04));
+  }
+  .active-elevate-2:active {
+    background-image: linear-gradient(hsl(0 0% 0% / 0.06), hsl(0 0% 0% / 0.06));
+  }
+  .dark .active-elevate-2:active {
+    background-image: linear-gradient(hsl(0 0% 100% / 0.08), hsl(0 0% 100% / 0.08));
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Shimmer skeleton */
+  .skeleton-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .skeleton-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--foreground) / 0.06),
+      transparent
+    );
+    animation: shimmer 1.5s infinite;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(to right, hsl(var(--border) / 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border) / 0.5) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+
+/* Primary scroll region containment for dashboard */
+.app-scroll {
+  overscroll-behavior: contain;
+}
+
+/* Recharts: inherit theme for axis/labels */
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Print stylesheet — clean PDF export of the Impact Report ── */
+@media print {
+  /* Hide app chrome: sidebar, topbar, and any opt-out element */
+  aside,
+  header,
+  .no-print {
+    display: none !important;
+  }
+
+  html,
+  body {
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+
+  /* Unlock the dashboard flex/scroll containers so content flows across pages */
+  .app-scroll,
+  main {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .flex.h-dvh {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  /* Force light, ink-friendly rendering regardless of theme */
+  :root,
+  .dark {
+    --background: 0 0% 100%;
+    --foreground: 222 20% 12%;
+    --card: 0 0% 100%;
+    --muted: 210 16% 96%;
+    --muted-foreground: 222 12% 38%;
+    --border: 214 18% 86%;
+  }
+
+  #report-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Avoid awkward breaks inside report cards/sections */
+  section,
+  .recharts-wrapper,
+  [class*="rounded-"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}

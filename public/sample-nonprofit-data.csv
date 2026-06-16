@@ -1,0 +1,782 @@
+date,program,location,funder,donation_amount,volunteer_hours,clients_served,attendance,expenses
+2024-01-15,After-School,Paterson,State Grant,280.16,7,20,25,116.27
+2024-01-15,Senior Meals,Paterson,State Grant,186.68,9,0,14,121.76
+2024-01-15,Youth Mentoring,Trenton,Federal,155.34,5,10,20,88.18
+2024-01-15,Youth Mentoring,Trenton,Federal,120.5,11,6,16,66.15
+2024-01-15,Youth Mentoring,Trenton,Federal,236.89,6,9,25,150.24
+2024-01-15,Senior Meals,Camden,Individual,180.56,7,18,25,107.98
+2024-01-15,Job Training,Paterson,Individual,152.81,5,16,28,118.17
+2024-01-15,Senior Meals,Trenton,State Grant,190.73,2,10,33,121.64
+2024-01-15,Youth Mentoring,Paterson,State Grant,296.0,0,12,19,201.46
+2024-01-15,Youth Mentoring,Paterson,Individual,140.88,0,19,19,90.78
+2024-01-15,Senior Meals,Trenton,Private Foundation,185.41,4,4,32,80.14
+2024-01-15,Senior Meals,Paterson,Federal,171.5,7,5,18,136.27
+2024-01-15,Senior Meals,Newark,Private Foundation,224.7,6,25,23,106.27
+2024-01-15,Job Training,Trenton,Private Foundation,104.56,7,22,18,63.38
+2024-01-15,Youth Mentoring,Trenton,Corporate,306.43,2,15,14,171.48
+2024-01-15,Food Pantry,Paterson,,211.07,6,16,28,88.87
+2024-01-15,Food Pantry,Edison,Private Foundation,0,4,17,24,0.0
+2024-01-15,Job Training,Camden,Federal,149.71,7,20,21,88.86
+2024-01-15,Food Pantry,Newark,State Grant,179.7,1,11,12,86.63
+2024-01-15,Youth Mentoring,Camden,Private Foundation,106.66,0,11,32,46.55
+2024-01-15,Job Training,Edison,Individual,250.75,4,7,19,164.14
+2024-01-15,Youth Mentoring,Newark,Private Foundation,241.48,1,8,21,99.39
+2024-01-15,Food Pantry,Camden,Corporate,172.04,10,0,28,136.81
+2024-01-15,Job Training,Trenton,Private Foundation,261.24,8,0,24,168.27
+2024-01-15,Food Pantry,Paterson,Individual,191.63,4,22,14,134.15
+2024-01-15,Senior Meals,Newark,Corporate,199.7,3,19,20,111.94
+2024-01-15,Food Pantry,Newark,Private Foundation,201.25,5,5,24,129.73
+2024-01-15,Youth Mentoring,Paterson,Individual,243.24,9,16,9,107.3
+2024-01-15,After-School,Paterson,Private Foundation,208.53,4,12,27,132.33
+2024-01-15,Job Training,Edison,Corporate,196.1,5,21,14,142.37
+2024-01-15,Youth Mentoring,Paterson,Federal,215.18,7,21,12,138.45
+2024-01-15,After-School,Newark,Private Foundation,37.35,6,10,30,23.24
+2024-01-15,Food Pantry,Edison,State Grant,180.69,8,6,21,127.21
+2024-01-15,Food Pantry,Paterson,Individual,98.79,3,11,13,60.59
+2024-01-15,Senior Meals,Edison,Private Foundation,122.26,0,13,32,95.03
+2024-01-15,Senior Meals,Newark,Corporate,250.2,8,14,25,167.08
+2024-01-15,Food Pantry,Newark,Individual,296.09,10,16,41,165.6
+2024-01-15,Senior Meals,Newark,,230.51,8,11,26,121.57
+2024-02-15,Food Pantry,Camden,Federal,51.63,7,9,22,40.49
+2024-02-15,Food Pantry,Newark,State Grant,249.13,7,18,35,181.34
+2024-02-15,Job Training,Paterson,Private Foundation,81.81,5,12,28,58.89
+2024-02-15,After-School,Paterson,State Grant,185.23,6,14,33,90.57
+2024-02-15,Job Training,Trenton,Corporate,475.79,6,21,17,198.54
+2024-02-15,After-School,Trenton,Private Foundation,182.95,8,9,15,88.25
+2024-02-15,Senior Meals,Edison,Private Foundation,166.32,11,15,23,100.17
+2024-02-15,After-School,Edison,Corporate,189.86,9,9,13,117.4
+2024-02-15,Senior Meals,Edison,Individual,89.63,0,19,11,58.65
+2024-02-15,Senior Meals,Camden,State Grant,195.13,5,19,17,82.38
+2024-02-15,Senior Meals,Edison,Individual,74.73,3,16,28,30.0
+2024-02-15,Job Training,Camden,Federal,176.58,6,15,27,94.32
+2024-02-15,Food Pantry,Paterson,Individual,126.92,6,19,23,55.32
+2024-02-15,Senior Meals,Edison,State Grant,127.48,7,27,33,94.5
+2024-02-15,After-School,Edison,,200.11,1,12,33,91.63
+2024-02-15,Youth Mentoring,Paterson,Federal,257.44,9,20,10,188.08
+2024-02-15,Youth Mentoring,Newark,State Grant,234.38,6,23,32,146.12
+2024-02-15,Food Pantry,Edison,Private Foundation,179.88,6,14,13,110.46
+2024-02-15,Youth Mentoring,Trenton,Corporate,186.71,7,14,17,129.94
+2024-02-15,Senior Meals,Paterson,Corporate,362.38,9,22,26,173.69
+2024-02-15,Youth Mentoring,Newark,Individual,183.53,11,13,22,77.87
+2024-02-15,Job Training,Trenton,,153.62,4,8,24,68.73
+2024-02-15,Youth Mentoring,Newark,Individual,396.39,5,3,26,312.06
+2024-02-15,Senior Meals,Camden,Corporate,241.42,13,11,20,147.18
+2024-02-15,Job Training,Newark,Federal,233.02,3,13,17,176.88
+2024-02-15,Senior Meals,Paterson,State Grant,306.32,12,6,30,173.52
+2024-02-15,Senior Meals,Camden,State Grant,190.05,6,16,19,146.44
+2024-02-15,Food Pantry,Camden,Individual,124.74,8,9,18,71.25
+2024-02-15,Job Training,Trenton,Individual,324.26,9,18,20,164.17
+2024-02-15,Youth Mentoring,Camden,Private Foundation,210.11,1,24,25,117.67
+2024-02-15,Youth Mentoring,Edison,Private Foundation,181.75,5,5,26,119.55
+2024-02-15,Job Training,Paterson,State Grant,283.97,4,10,26,142.64
+2024-02-15,Job Training,Paterson,Private Foundation,151.12,9,16,27,73.01
+2024-02-15,Senior Meals,Edison,Private Foundation,109.74,7,7,27,54.61
+2024-02-15,After-School,Camden,Federal,243.13,7,3,15,170.16
+2024-02-15,Senior Meals,Paterson,Corporate,185.59,4,14,13,116.87
+2024-02-15,Job Training,Newark,Federal,30.79,5,25,32,17.05
+2024-02-15,Senior Meals,Paterson,Individual,293.42,1,23,25,222.49
+2024-02-15,Senior Meals,Edison,Corporate,276.91,6,19,8,218.45
+2024-03-15,Food Pantry,Newark,Private Foundation,333.24,13,19,12,246.13
+2024-03-15,Senior Meals,Trenton,Federal,195.19,6,13,22,133.9
+2024-03-15,After-School,Camden,Federal,103.07,2,21,27,65.26
+2024-03-15,Senior Meals,Camden,Private Foundation,195.49,6,19,23,102.93
+2024-03-15,After-School,Paterson,Federal,200.88,8,13,17,82.1
+2024-03-15,Senior Meals,Paterson,State Grant,188.31,10,15,25,100.79
+2024-03-15,Senior Meals,Camden,Corporate,245.91,11,11,23,193.76
+2024-03-15,Job Training,Newark,Private Foundation,125.46,6,21,30,80.8
+2024-03-15,After-School,Paterson,Corporate,220.34,5,16,22,90.22
+2024-03-15,Youth Mentoring,Newark,Corporate,224.43,6,25,13,155.55
+2024-03-15,Food Pantry,Newark,Individual,242.05,10,10,25,167.05
+2024-03-15,Job Training,Camden,Corporate,197.72,6,6,39,88.87
+2024-03-15,After-School,Paterson,Individual,203.48,3,23,30,97.32
+2024-03-15,Youth Mentoring,Paterson,Private Foundation,128.99,10,12,19,83.86
+2024-03-15,Senior Meals,Trenton,Corporate,225.98,6,14,37,171.61
+2024-03-15,Job Training,Camden,Individual,80.84,12,14,11,62.22
+2024-03-15,Job Training,Trenton,Federal,304.82,4,19,24,179.87
+2024-03-15,Senior Meals,Paterson,Individual,335.89,3,14,23,259.45
+2024-03-15,Job Training,Newark,Federal,209.95,12,16,13,126.97
+2024-03-15,Senior Meals,Newark,Private Foundation,85.35,8,11,22,48.7
+2024-03-15,Food Pantry,Trenton,Individual,150.79,5,31,22,70.76
+2024-03-15,After-School,Paterson,Corporate,96.33,3,20,14,43.2
+2024-03-15,Job Training,Camden,Individual,115.01,5,16,29,57.29
+2024-03-15,After-School,Camden,Federal,206.86,7,15,33,136.5
+2024-03-15,Food Pantry,Paterson,State Grant,276.14,8,22,8,114.91
+2024-03-15,Job Training,Newark,State Grant,310.26,7,15,26,187.73
+2024-03-15,After-School,Paterson,Federal,184.65,11,21,30,119.65
+2024-03-15,After-School,Trenton,Individual,179.9,7,24,26,137.73
+2024-03-15,Food Pantry,Camden,Corporate,169.33,4,18,37,104.85
+2024-03-15,Food Pantry,Paterson,State Grant,232.16,2,6,21,129.8
+2024-03-15,Job Training,Paterson,Individual,148.17,3,14,7,83.81
+2024-03-15,Food Pantry,Camden,Private Foundation,123.47,8,11,25,55.0
+2024-03-15,Food Pantry,Paterson,Federal,268.54,4,22,24,176.23
+2024-03-15,Senior Meals,Trenton,Federal,132.07,4,18,28,80.36
+2024-03-15,Food Pantry,Trenton,Corporate,32.0,6,16,27,24.87
+2024-04-15,Job Training,Trenton,Federal,281.35,5,7,14,130.58
+2024-04-15,After-School,Edison,Corporate,156.93,5,14,23,121.69
+2024-04-15,After-School,Paterson,Individual,250.12,8,17,23,156.31
+2024-04-15,Food Pantry,Camden,State Grant,125.18,8,17,13,65.5
+2024-04-15,After-School,Paterson,Corporate,148.53,3,23,26,88.49
+2024-04-15,After-School,Paterson,Federal,220.26,3,12,25,99.42
+2024-04-15,Senior Meals,Camden,State Grant,236.0,3,18,25,181.45
+2024-04-15,Job Training,Edison,,302.03,7,18,23,224.36
+2024-04-15,Youth Mentoring,Trenton,Private Foundation,328.52,11,19,11,221.57
+2024-04-15,After-School,Trenton,Individual,148.85,5,5,13,86.71
+2024-04-15,Job Training,Edison,,219.8,8,14,26,103.93
+2024-04-15,After-School,Camden,Individual,244.92,5,21,31,160.31
+2024-04-15,Job Training,Paterson,Federal,65.34,6,15,34,48.52
+2024-04-15,Job Training,Camden,Corporate,319.51,6,16,16,150.39
+2024-04-15,Food Pantry,Camden,Federal,198.65,11,8,18,104.3
+2024-04-15,Food Pantry,Trenton,Private Foundation,275.2,10,2,23,124.61
+2024-04-15,After-School,Edison,State Grant,208.05,6,20,29,101.88
+2024-04-15,Youth Mentoring,Camden,Federal,258.96,8,16,25,186.61
+2024-04-15,After-School,Paterson,State Grant,247.95,7,14,39,195.1
+2024-04-15,Food Pantry,Edison,Individual,103.64,4,8,23,48.3
+2024-04-15,Food Pantry,Trenton,State Grant,111.54,6,25,29,45.17
+2024-04-15,Youth Mentoring,Newark,Private Foundation,108.61,8,11,18,70.08
+2024-04-15,Youth Mentoring,Camden,State Grant,192.79,7,17,12,77.61
+2024-04-15,Senior Meals,Paterson,State Grant,196.48,3,19,28,81.64
+2024-04-15,Job Training,Camden,State Grant,190.13,10,17,15,96.23
+2024-04-15,After-School,Trenton,Federal,271.18,6,15,5,189.41
+2024-04-15,Job Training,Newark,Corporate,170.07,8,9,15,113.28
+2024-04-15,Youth Mentoring,Paterson,Corporate,275.97,2,6,29,173.35
+2024-04-15,Job Training,Newark,Corporate,175.61,5,16,26,77.74
+2024-04-15,After-School,Camden,Private Foundation,194.74,6,14,22,83.18
+2024-04-15,Food Pantry,Trenton,Federal,206.03,4,7,22,154.91
+2024-04-15,Senior Meals,Trenton,Private Foundation,213.65,8,22,12,139.66
+2024-04-15,Job Training,Paterson,State Grant,308.82,10,14,31,155.79
+2024-04-15,Job Training,Camden,Individual,346.64,8,16,13,204.67
+2024-04-15,Job Training,Edison,State Grant,207.11,5,21,29,86.83
+2024-04-15,Youth Mentoring,Newark,State Grant,135.53,5,10,23,94.9
+2024-04-15,Food Pantry,Trenton,Individual,97.11,6,18,33,52.33
+2024-04-15,Youth Mentoring,Camden,Federal,270.6,5,13,15,120.14
+2024-04-15,Food Pantry,Paterson,Federal,230.71,2,10,29,174.45
+2024-04-15,Food Pantry,Paterson,State Grant,148.56,8,12,23,117.8
+2024-04-15,After-School,Paterson,Private Foundation,53.72,5,12,18,28.51
+2024-04-15,After-School,Paterson,Federal,198.84,4,16,14,89.56
+2024-04-15,Senior Meals,Newark,,228.96,9,17,20,105.87
+2024-05-15,Job Training,Edison,Federal,170.43,8,15,45,136.0
+2024-05-15,After-School,Trenton,Private Foundation,15.72,12,15,17,7.52
+2024-05-15,Food Pantry,Camden,Private Foundation,284.29,4,20,18,139.01
+2024-05-15,Job Training,Paterson,State Grant,285.78,10,15,8,163.47
+2024-05-15,Youth Mentoring,Edison,Corporate,284.6,3,22,17,180.3
+2024-05-15,After-School,Newark,State Grant,134.06,7,21,30,95.58
+2024-05-15,After-School,Camden,Corporate,190.97,7,7,24,143.07
+2024-05-15,Job Training,Trenton,Corporate,305.58,1,16,31,209.78
+2024-05-15,After-School,Edison,Individual,303.52,9,14,16,199.02
+2024-05-15,Job Training,Edison,Individual,23.78,10,13,18,16.77
+2024-05-15,Food Pantry,Edison,Individual,164.23,5,18,26,125.83
+2024-05-15,Job Training,Edison,Individual,268.01,8,31,19,213.79
+2024-05-15,Senior Meals,Paterson,Private Foundation,314.81,12,17,20,206.79
+2024-05-15,After-School,Newark,Individual,123.41,2,0,39,86.88
+2024-05-15,After-School,Paterson,Individual,222.45,4,9,4,149.38
+2024-05-15,Senior Meals,Trenton,Individual,126.46,10,7,26,54.9
+2024-05-15,Job Training,Newark,Individual,227.62,6,24,17,103.83
+2024-05-15,Job Training,Edison,State Grant,174.83,5,14,36,110.39
+2024-05-15,After-School,Newark,Corporate,179.29,8,17,20,135.62
+2024-05-15,Youth Mentoring,Trenton,Federal,249.54,1,13,16,173.87
+2024-05-15,Senior Meals,Trenton,Federal,277.81,9,8,27,164.95
+2024-05-15,After-School,Paterson,Private Foundation,96.72,7,27,26,56.79
+2024-05-15,Youth Mentoring,Paterson,Individual,255.81,4,18,24,167.51
+2024-05-15,Food Pantry,Trenton,Federal,349.74,8,17,22,207.63
+2024-05-15,After-School,Trenton,,183.76,2,19,19,108.38
+2024-05-15,Youth Mentoring,Edison,Private Foundation,191.27,9,20,27,103.68
+2024-05-15,Senior Meals,Paterson,Individual,137.15,6,24,23,98.31
+2024-05-15,Job Training,Newark,Individual,198.02,5,33,39,110.8
+2024-05-15,Youth Mentoring,Paterson,Federal,127.7,5,26,29,75.35
+2024-05-15,Food Pantry,Edison,Federal,113.64,4,13,15,76.41
+2024-05-15,After-School,Trenton,Corporate,169.53,5,20,19,74.63
+2024-05-15,Food Pantry,Camden,Private Foundation,235.12,3,14,33,124.0
+2024-05-15,Senior Meals,Edison,Federal,236.4,6,19,26,171.18
+2024-05-15,Youth Mentoring,Paterson,Corporate,332.72,8,25,25,153.76
+2024-05-15,Senior Meals,Edison,State Grant,297.04,8,11,19,119.92
+2024-06-15,Food Pantry,Newark,,227.75,7,17,39,108.17
+2024-06-15,Food Pantry,Camden,Private Foundation,211.2,5,15,17,163.24
+2024-06-15,Job Training,Trenton,State Grant,231.46,7,17,23,121.38
+2024-06-15,Youth Mentoring,Newark,Corporate,155.2,5,15,17,72.41
+2024-06-15,Food Pantry,Camden,Private Foundation,151.78,4,20,7,108.35
+2024-06-15,Youth Mentoring,Camden,Individual,192.55,11,19,16,143.99
+2024-06-15,Food Pantry,Newark,Federal,275.19,3,16,34,151.49
+2024-06-15,After-School,Paterson,Individual,186.15,4,24,41,131.3
+2024-06-15,Food Pantry,Camden,Private Foundation,284.42,1,15,41,205.58
+2024-06-15,Senior Meals,Camden,Federal,314.38,9,19,39,242.92
+2024-06-15,After-School,Camden,Federal,300.46,8,23,21,121.31
+2024-06-15,Senior Meals,Paterson,Federal,354.99,10,17,36,269.36
+2024-06-15,Youth Mentoring,Camden,Corporate,155.61,7,25,34,80.28
+2024-06-15,Youth Mentoring,Edison,Individual,127.14,9,36,33,69.88
+2024-06-15,Food Pantry,Camden,Corporate,228.19,5,12,34,93.15
+2024-06-15,Food Pantry,Newark,Federal,99.95,7,17,18,77.82
+2024-06-15,Youth Mentoring,Edison,Private Foundation,215.37,8,17,29,90.54
+2024-06-15,Youth Mentoring,Camden,Corporate,42.62,7,22,17,32.77
+2024-06-15,Food Pantry,Camden,Individual,97.66,5,13,19,56.58
+2024-06-15,After-School,Camden,Private Foundation,279.64,7,16,33,212.83
+2024-06-15,Food Pantry,Trenton,Individual,248.07,2,18,26,113.6
+2024-06-15,Food Pantry,Newark,Individual,133.94,5,11,27,74.47
+2024-06-15,Job Training,Paterson,Corporate,248.52,9,16,25,170.71
+2024-06-15,After-School,Trenton,Private Foundation,273.09,6,25,13,124.5
+2024-06-15,Senior Meals,Trenton,Corporate,285.36,3,10,38,168.65
+2024-06-15,Job Training,Newark,Individual,221.45,8,13,24,165.71
+2024-06-15,Job Training,Paterson,Corporate,216.42,7,13,40,109.13
+2024-06-15,Food Pantry,Camden,Corporate,252.36,6,28,32,168.4
+2024-06-15,After-School,Edison,Corporate,239.15,5,23,24,120.68
+2024-06-15,After-School,Newark,State Grant,144.06,9,25,7,65.94
+2024-06-15,Food Pantry,Paterson,Federal,2271.12,8,20,17,1077.26
+2024-07-15,Food Pantry,Paterson,Private Foundation,213.66,9,13,26,100.47
+2024-07-15,Youth Mentoring,Trenton,State Grant,335.16,4,18,31,223.87
+2024-07-15,After-School,Edison,Individual,233.0,8,9,34,98.36
+2024-07-15,Job Training,Camden,Individual,321.43,2,30,28,189.85
+2024-07-15,Job Training,Newark,Private Foundation,0,4,15,17,0.0
+2024-07-15,Job Training,Edison,Corporate,257.16,7,17,42,196.73
+2024-07-15,Senior Meals,Edison,State Grant,212.11,8,16,27,153.1
+2024-07-15,After-School,Trenton,Private Foundation,285.91,7,21,30,207.82
+2024-07-15,Food Pantry,Trenton,State Grant,355.14,5,21,17,207.96
+2024-07-15,After-School,Paterson,State Grant,199.56,8,16,36,126.59
+2024-07-15,Job Training,Trenton,State Grant,358.25,11,17,32,239.14
+2024-07-15,Senior Meals,Paterson,Private Foundation,239.68,7,14,17,153.66
+2024-07-15,Food Pantry,Paterson,State Grant,236.97,4,14,34,187.8
+2024-07-15,Job Training,Paterson,Federal,325.74,8,21,24,185.3
+2024-07-15,Food Pantry,Camden,State Grant,189.74,7,16,27,86.48
+2024-07-15,Senior Meals,Paterson,State Grant,291.22,1,25,29,147.45
+2024-07-15,Youth Mentoring,Camden,Federal,231.62,6,18,28,114.57
+2024-07-15,Food Pantry,Camden,State Grant,178.86,11,4,16,108.3
+2024-07-15,Job Training,Trenton,,47.21,3,4,26,36.17
+2024-07-15,Youth Mentoring,Camden,,224.8,8,21,18,141.19
+2024-07-15,Senior Meals,Newark,Federal,198.54,4,12,21,104.08
+2024-07-15,After-School,Camden,Private Foundation,265.62,10,6,38,123.49
+2024-07-15,After-School,Camden,Federal,190.6,9,17,29,77.9
+2024-07-15,Youth Mentoring,Trenton,,290.11,5,12,32,201.38
+2024-07-15,Food Pantry,Edison,Private Foundation,358.32,7,9,33,163.44
+2024-07-15,After-School,Edison,,321.35,2,16,14,226.19
+2024-07-15,Senior Meals,Camden,Private Foundation,187.28,8,14,26,104.69
+2024-07-15,Youth Mentoring,Newark,Corporate,266.0,5,26,37,180.1
+2024-07-15,Job Training,Camden,Individual,156.91,10,16,26,109.57
+2024-07-15,Senior Meals,Paterson,Corporate,188.68,10,11,30,92.98
+2024-07-15,Job Training,Camden,Federal,342.74,0,5,35,138.56
+2024-07-15,Food Pantry,Camden,Federal,283.5,5,14,37,162.97
+2024-07-15,Youth Mentoring,Paterson,Corporate,197.9,7,16,27,84.56
+2024-07-15,After-School,Trenton,Corporate,159.02,9,6,19,124.96
+2024-07-15,Senior Meals,Paterson,Corporate,244.15,1,13,14,106.67
+2024-07-15,Job Training,Camden,Individual,389.98,6,27,38,263.61
+2024-07-15,Youth Mentoring,Paterson,Private Foundation,59.44,6,22,22,25.21
+2024-07-15,Youth Mentoring,Edison,State Grant,50.06,15,23,29,35.8
+2024-07-15,Job Training,Edison,State Grant,301.77,5,18,27,141.86
+2024-07-15,Youth Mentoring,Edison,,355.15,2,19,31,227.54
+2024-07-15,After-School,Newark,Federal,225.75,6,20,35,164.63
+2024-08-15,Food Pantry,Trenton,Federal,167.36,11,20,33,73.6
+2024-08-15,Youth Mentoring,Trenton,Individual,275.52,11,19,36,194.41
+2024-08-15,Food Pantry,Paterson,State Grant,180.76,6,28,21,95.06
+2024-08-15,Senior Meals,Camden,Corporate,47.81,3,22,26,26.58
+2024-08-15,Youth Mentoring,Newark,Corporate,163.7,13,19,22,76.84
+2024-08-15,Job Training,Paterson,Private Foundation,416.36,7,14,33,311.68
+2024-08-15,Job Training,Paterson,State Grant,321.89,6,12,25,188.89
+2024-08-15,Job Training,Newark,Corporate,360.19,8,23,38,157.42
+2024-08-15,Job Training,Edison,Private Foundation,135.39,6,18,35,65.88
+2024-08-15,Senior Meals,Paterson,Federal,287.97,14,18,36,130.27
+2024-08-15,Job Training,Edison,Corporate,156.91,6,14,24,117.52
+2024-08-15,Food Pantry,Edison,State Grant,161.48,7,11,35,101.26
+2024-08-15,Job Training,Trenton,Corporate,196.52,3,18,33,148.67
+2024-08-15,Food Pantry,Edison,Individual,281.95,2,17,24,145.32
+2024-08-15,Senior Meals,Camden,Individual,68.59,11,26,17,31.06
+2024-08-15,Job Training,Newark,State Grant,122.52,11,19,27,83.5
+2024-08-15,Senior Meals,Newark,Corporate,154.57,11,27,39,107.21
+2024-08-15,Food Pantry,Paterson,State Grant,156.23,5,23,39,97.01
+2024-08-15,After-School,Edison,Private Foundation,101.14,5,9,32,54.58
+2024-08-15,Food Pantry,Trenton,Individual,379.64,4,12,7,255.28
+2024-08-15,Food Pantry,Camden,Private Foundation,244.46,4,9,34,195.38
+2024-08-15,Youth Mentoring,Newark,Individual,148.23,7,12,30,89.12
+2024-08-15,Senior Meals,Edison,State Grant,203.19,5,23,16,121.06
+2024-08-15,After-School,Trenton,Federal,222.44,11,13,20,111.19
+2024-08-15,Food Pantry,Newark,Individual,207.65,8,23,37,123.46
+2024-08-15,Senior Meals,Newark,Private Foundation,368.34,7,12,18,166.99
+2024-08-15,After-School,Edison,Federal,237.75,11,5,36,159.49
+2024-08-15,After-School,Edison,Corporate,279.38,5,17,26,166.13
+2024-08-15,Food Pantry,Trenton,Individual,215.92,9,21,27,124.81
+2024-08-15,Youth Mentoring,Camden,Individual,247.5,8,27,27,107.31
+2024-08-15,Job Training,Edison,,311.24,9,20,37,125.53
+2024-08-15,Food Pantry,Camden,Federal,350.59,5,18,32,144.12
+2024-08-15,Senior Meals,Newark,Individual,75.07,13,25,20,33.1
+2024-08-15,Job Training,Edison,Individual,136.03,10,18,32,104.46
+2024-08-15,Job Training,Newark,State Grant,342.94,8,21,16,261.35
+2024-08-15,After-School,Paterson,Corporate,177.71,7,15,26,119.99
+2024-08-15,After-School,Newark,Corporate,170.86,5,21,20,83.26
+2024-08-15,Job Training,Trenton,State Grant,326.0,2,13,31,216.68
+2024-08-15,Youth Mentoring,Paterson,Individual,241.45,7,22,39,133.17
+2024-08-15,Food Pantry,Paterson,Federal,177.67,4,10,25,101.51
+2024-08-15,Youth Mentoring,Newark,Corporate,351.99,6,26,32,226.56
+2024-09-15,Youth Mentoring,Edison,Corporate,336.14,6,16,36,253.46
+2024-09-15,Food Pantry,Newark,Private Foundation,195.14,4,15,22,123.39
+2024-09-15,Senior Meals,Camden,Federal,243.55,11,20,49,117.18
+2024-09-15,Food Pantry,Newark,Individual,203.41,6,17,23,118.64
+2024-09-15,Youth Mentoring,Edison,State Grant,219.77,1,23,19,158.26
+2024-09-15,After-School,Edison,Federal,65.9,7,7,14,39.94
+2024-09-15,Senior Meals,Paterson,Federal,346.04,14,18,24,245.85
+2024-09-15,Food Pantry,Paterson,Private Foundation,262.73,8,24,26,117.76
+2024-09-15,After-School,Paterson,State Grant,105.46,3,29,21,49.27
+2024-09-15,Job Training,Trenton,Individual,299.97,9,27,24,125.21
+2024-09-15,Youth Mentoring,Camden,State Grant,188.18,10,31,32,93.52
+2024-09-15,Job Training,Newark,Corporate,504.77,9,20,20,216.8
+2024-09-15,Job Training,Newark,Private Foundation,167.39,7,16,32,125.57
+2024-09-15,Youth Mentoring,Camden,Corporate,319.69,8,6,28,230.23
+2024-09-15,Food Pantry,Trenton,Private Foundation,143.45,4,27,11,97.14
+2024-09-15,Senior Meals,Paterson,Private Foundation,323.94,4,16,33,245.41
+2024-09-15,Youth Mentoring,Edison,State Grant,277.6,13,15,36,215.13
+2024-09-15,Job Training,Trenton,Individual,166.31,6,1,34,69.54
+2024-09-15,After-School,Newark,Individual,213.23,8,13,37,135.14
+2024-09-15,After-School,Trenton,Federal,270.57,7,11,33,118.94
+2024-09-15,Job Training,Newark,Private Foundation,205.56,5,18,19,134.45
+2024-09-15,Job Training,Edison,Corporate,166.53,11,26,19,100.17
+2024-09-15,After-School,Newark,Individual,273.22,9,15,21,152.57
+2024-09-15,Job Training,Newark,Federal,307.32,8,17,19,238.16
+2024-09-15,Job Training,Trenton,Private Foundation,205.77,7,2,17,111.69
+2024-09-15,Senior Meals,Trenton,Corporate,214.05,9,8,25,139.26
+2024-09-15,After-School,Trenton,Private Foundation,331.33,8,17,38,145.73
+2024-09-15,After-School,Trenton,Private Foundation,208.14,7,22,23,94.63
+2024-09-15,After-School,Camden,,227.81,7,23,30,170.2
+2024-09-15,Food Pantry,Paterson,Corporate,112.97,4,25,18,49.13
+2024-09-15,Youth Mentoring,Camden,Corporate,328.24,7,19,27,172.9
+2024-09-15,Job Training,Trenton,Corporate,128.64,4,21,31,58.8
+2024-09-15,Food Pantry,Camden,Individual,138.42,9,10,25,88.68
+2024-09-15,Job Training,Newark,Federal,230.62,12,19,22,163.52
+2024-09-15,Senior Meals,Edison,Individual,166.42,10,18,39,73.21
+2024-09-15,Job Training,Newark,Private Foundation,34.33,12,16,26,21.19
+2024-09-15,After-School,Edison,Private Foundation,230.57,12,28,19,171.15
+2024-10-15,Youth Mentoring,Trenton,Individual,256.59,5,10,29,137.97
+2024-10-15,Senior Meals,Paterson,Private Foundation,157.72,13,18,26,103.81
+2024-10-15,Senior Meals,Camden,State Grant,256.78,11,12,38,191.08
+2024-10-15,Food Pantry,Camden,State Grant,237.38,11,21,42,155.98
+2024-10-15,Job Training,Paterson,Private Foundation,402.91,7,28,24,314.96
+2024-10-15,After-School,Camden,Individual,251.59,8,19,36,162.05
+2024-10-15,Senior Meals,Newark,Federal,393.58,9,18,27,279.27
+2024-10-15,Senior Meals,Newark,Corporate,436.48,0,21,30,344.7
+2024-10-15,Food Pantry,Newark,Individual,330.54,12,23,40,144.15
+2024-10-15,Job Training,Paterson,Individual,267.9,8,21,18,111.22
+2024-10-15,Youth Mentoring,Edison,Private Foundation,120.58,6,31,34,51.35
+2024-10-15,Food Pantry,Trenton,Corporate,4233.72,7,20,39,2765.81
+2024-10-15,Youth Mentoring,Edison,State Grant,75.66,7,33,39,56.08
+2024-10-15,After-School,Trenton,Individual,240.27,7,22,28,100.71
+2024-10-15,Youth Mentoring,Camden,Individual,381.89,8,11,27,258.2
+2024-10-15,Job Training,Paterson,Corporate,205.78,11,14,35,116.06
+2024-10-15,After-School,Trenton,Private Foundation,84.67,3,14,24,42.02
+2024-10-15,After-School,Trenton,State Grant,331.76,3,27,33,175.75
+2024-10-15,Senior Meals,Edison,Individual,131.22,9,14,22,70.46
+2024-10-15,Youth Mentoring,Paterson,Private Foundation,317.13,3,17,32,250.65
+2024-10-15,Job Training,Edison,Individual,389.43,10,28,23,196.63
+2024-10-15,Senior Meals,Camden,Federal,145.78,6,28,35,79.54
+2024-10-15,After-School,Edison,Private Foundation,270.56,6,21,21,177.54
+2024-10-15,Food Pantry,Camden,Corporate,128.76,12,11,36,70.83
+2024-10-15,Job Training,Camden,Federal,146.86,7,2,46,99.57
+2024-10-15,Senior Meals,Paterson,Private Foundation,247.64,6,14,37,122.59
+2024-10-15,Job Training,Edison,Individual,266.67,5,23,29,169.67
+2024-10-15,Job Training,Edison,Individual,304.75,7,12,33,182.04
+2024-10-15,Food Pantry,Newark,Private Foundation,103.48,10,17,31,59.71
+2024-10-15,Job Training,Trenton,Individual,338.65,7,18,35,250.56
+2024-10-15,After-School,Edison,Private Foundation,418.91,7,22,32,311.7
+2024-10-15,Food Pantry,Paterson,Corporate,171.82,10,12,18,76.14
+2024-10-15,Youth Mentoring,Paterson,Corporate,215.57,5,20,32,120.51
+2024-11-15,Youth Mentoring,Trenton,Private Foundation,246.53,5,16,21,174.47
+2024-11-15,Senior Meals,Trenton,,258.6,9,21,32,181.36
+2024-11-15,Youth Mentoring,Paterson,,278.94,6,24,23,195.03
+2024-11-15,Youth Mentoring,Newark,Corporate,326.41,2,15,39,131.35
+2024-11-15,Youth Mentoring,Camden,Federal,245.96,10,24,22,148.66
+2024-11-15,Senior Meals,Trenton,Individual,191.33,14,22,25,91.99
+2024-11-15,Food Pantry,Newark,Federal,131.59,2,18,26,101.61
+2024-11-15,Job Training,Newark,Corporate,352.3,6,16,39,198.55
+2024-11-15,Youth Mentoring,Camden,State Grant,228.33,13,16,16,145.41
+2024-11-15,Senior Meals,Paterson,Corporate,269.34,10,21,27,122.5
+2024-11-15,Food Pantry,Edison,Corporate,338.45,14,21,21,226.61
+2024-11-15,Job Training,Newark,Federal,278.61,6,20,34,122.06
+2024-11-15,Food Pantry,Trenton,Corporate,279.96,14,13,33,209.21
+2024-11-15,After-School,Trenton,Private Foundation,290.66,6,15,27,181.44
+2024-11-15,After-School,Camden,Individual,174.19,13,24,9,96.95
+2024-11-15,Food Pantry,Camden,Corporate,293.58,10,18,25,134.92
+2024-11-15,After-School,Paterson,Individual,232.84,7,29,43,185.91
+2024-11-15,Youth Mentoring,Edison,State Grant,230.92,11,5,31,100.96
+2024-11-15,Senior Meals,Camden,Individual,160.26,6,22,35,121.35
+2024-11-15,After-School,Edison,Individual,371.12,9,11,46,245.91
+2024-11-15,Food Pantry,Newark,Individual,191.29,11,17,33,140.18
+2024-11-15,Food Pantry,Edison,Corporate,346.0,10,14,25,143.07
+2024-11-15,Youth Mentoring,Edison,State Grant,133.26,10,20,28,92.09
+2024-11-15,After-School,Camden,,2779.44,7,12,18,1449.07
+2024-11-15,Job Training,Trenton,State Grant,284.56,7,16,29,167.07
+2024-11-15,After-School,Edison,Federal,318.85,9,18,40,253.55
+2024-11-15,After-School,Edison,Federal,254.61,9,29,35,173.28
+2024-11-15,After-School,Newark,State Grant,252.01,6,25,32,153.03
+2024-11-15,Job Training,Edison,State Grant,354.09,10,10,22,242.31
+2024-11-15,Food Pantry,Newark,State Grant,43.44,3,12,22,31.53
+2024-11-15,Job Training,Trenton,Corporate,204.08,7,29,24,84.26
+2024-11-15,After-School,Newark,,229.71,6,22,34,112.07
+2024-12-15,Food Pantry,Trenton,Corporate,366.03,9,27,36,155.58
+2024-12-15,Food Pantry,Camden,Corporate,378.85,11,28,49,253.48
+2024-12-15,Senior Meals,Newark,Individual,359.36,2,19,16,259.05
+2024-12-15,Youth Mentoring,Newark,Corporate,162.29,11,10,30,103.45
+2024-12-15,Food Pantry,Trenton,Individual,259.98,2,13,26,195.25
+2024-12-15,Youth Mentoring,Trenton,Corporate,212.61,6,20,24,117.28
+2024-12-15,Food Pantry,Newark,Individual,158.18,3,18,38,101.48
+2024-12-15,Food Pantry,Paterson,Corporate,194.88,9,17,30,108.66
+2024-12-15,Senior Meals,Edison,State Grant,249.09,9,18,23,165.5
+2024-12-15,After-School,Trenton,Private Foundation,248.48,7,22,37,194.58
+2024-12-15,Job Training,Newark,Private Foundation,160.59,13,25,29,84.69
+2024-12-15,Youth Mentoring,Edison,Private Foundation,406.13,2,31,32,179.31
+2024-12-15,After-School,Paterson,Federal,284.14,6,26,37,211.66
+2024-12-15,Youth Mentoring,Paterson,Private Foundation,430.94,5,27,36,248.93
+2024-12-15,Job Training,Camden,Individual,191.81,5,11,30,146.33
+2024-12-15,Senior Meals,Paterson,Individual,253.05,8,22,29,139.4
+2024-12-15,Job Training,Edison,Private Foundation,239.36,3,18,35,186.99
+2024-12-15,Job Training,Newark,Private Foundation,158.59,6,12,39,104.13
+2024-12-15,Job Training,Newark,Individual,262.15,7,18,33,204.48
+2024-12-15,Senior Meals,Paterson,Individual,232.85,6,10,24,167.06
+2024-12-15,Job Training,Newark,Private Foundation,75.74,8,19,26,39.75
+2024-12-15,Food Pantry,Edison,Individual,412.64,7,18,25,312.16
+2024-12-15,Senior Meals,Newark,Federal,217.55,11,19,39,120.57
+2024-12-15,Senior Meals,Camden,State Grant,315.37,14,24,21,224.37
+2024-12-15,Job Training,Trenton,Private Foundation,239.06,12,23,24,102.94
+2024-12-15,Senior Meals,Camden,Corporate,186.22,8,19,45,77.57
+2024-12-15,Youth Mentoring,Camden,Individual,191.11,6,29,20,83.81
+2024-12-15,Youth Mentoring,Paterson,State Grant,308.26,7,18,18,137.83
+2024-12-15,Senior Meals,Paterson,Individual,173.5,10,26,22,79.35
+2024-12-15,Youth Mentoring,Paterson,Individual,313.88,10,14,36,232.51
+2024-12-15,After-School,Edison,Corporate,162.54,10,26,20,119.53
+2024-12-15,After-School,Newark,Private Foundation,66.76,8,19,16,44.03
+2024-12-15,Job Training,Newark,Corporate,204.26,7,11,22,104.01
+2024-12-15,After-School,Newark,Individual,371.51,11,21,24,252.54
+2024-12-15,Food Pantry,Trenton,Individual,278.84,11,13,34,220.54
+2024-12-15,Youth Mentoring,Edison,Federal,268.23,7,23,35,174.83
+2024-12-15,Job Training,Camden,Federal,201.85,7,23,46,146.04
+2024-12-15,Youth Mentoring,Trenton,Private Foundation,262.99,7,18,33,171.47
+2025-01-15,Youth Mentoring,Trenton,Corporate,93.72,13,14,18,39.54
+2025-01-15,Job Training,Edison,Individual,228.88,6,15,28,180.28
+2025-01-15,Youth Mentoring,Paterson,Private Foundation,234.58,10,19,37,162.89
+2025-01-15,Youth Mentoring,Trenton,Corporate,293.68,3,21,27,206.23
+2025-01-15,Job Training,Trenton,Federal,260.23,7,32,33,179.24
+2025-01-15,Youth Mentoring,Camden,Federal,233.32,10,25,32,97.46
+2025-01-15,After-School,Camden,Corporate,397.34,5,23,34,183.39
+2025-01-15,Senior Meals,Paterson,State Grant,402.55,6,22,28,178.55
+2025-01-15,Youth Mentoring,Camden,Federal,201.96,10,24,30,103.27
+2025-01-15,Youth Mentoring,Paterson,Corporate,368.11,14,22,35,254.42
+2025-01-15,Youth Mentoring,Paterson,State Grant,435.64,9,18,33,329.17
+2025-01-15,Youth Mentoring,Trenton,,205.59,12,22,15,82.84
+2025-01-15,After-School,Camden,Corporate,296.31,7,26,29,186.33
+2025-01-15,Senior Meals,Trenton,Federal,261.62,7,13,39,179.34
+2025-01-15,After-School,Paterson,Corporate,230.86,7,13,40,166.22
+2025-01-15,After-School,Trenton,Corporate,130.21,6,20,21,64.72
+2025-01-15,After-School,Trenton,,177.15,9,30,29,73.99
+2025-01-15,Youth Mentoring,Edison,Corporate,262.18,10,20,28,206.93
+2025-01-15,Food Pantry,Newark,Private Foundation,285.23,7,29,41,215.6
+2025-01-15,Food Pantry,Trenton,State Grant,109.56,6,14,25,78.86
+2025-01-15,Food Pantry,Trenton,Federal,191.82,6,16,30,91.1
+2025-01-15,Youth Mentoring,Paterson,Private Foundation,360.26,11,18,34,284.82
+2025-01-15,Youth Mentoring,Edison,Individual,249.45,7,33,16,108.74
+2025-01-15,Job Training,Camden,Individual,270.37,7,30,30,108.9
+2025-01-15,Food Pantry,Trenton,State Grant,203.48,4,7,47,156.58
+2025-01-15,Youth Mentoring,Newark,State Grant,412.82,5,29,34,305.48
+2025-01-15,Senior Meals,Trenton,Private Foundation,211.31,7,27,43,156.06
+2025-01-15,Food Pantry,Camden,Corporate,347.01,10,12,17,244.62
+2025-01-15,Job Training,Camden,Private Foundation,377.84,9,15,30,274.47
+2025-01-15,Food Pantry,Newark,Individual,297.07,5,23,26,193.33
+2025-02-15,Food Pantry,Edison,State Grant,325.71,8,16,25,252.48
+2025-02-15,Senior Meals,Edison,State Grant,235.79,7,28,25,135.0
+2025-02-15,Food Pantry,Newark,Federal,146.73,10,21,20,73.28
+2025-02-15,Job Training,Trenton,,251.31,7,29,30,159.95
+2025-02-15,Food Pantry,Edison,State Grant,247.61,6,22,33,134.85
+2025-02-15,After-School,Edison,State Grant,251.18,4,30,20,145.69
+2025-02-15,Food Pantry,Camden,Individual,163.86,11,33,32,122.0
+2025-02-15,Senior Meals,Camden,,284.71,8,23,48,205.32
+2025-02-15,Job Training,Camden,Federal,331.91,9,26,43,210.69
+2025-02-15,Job Training,Newark,State Grant,298.8,10,14,41,187.6
+2025-02-15,After-School,Trenton,State Grant,253.37,11,26,30,156.3
+2025-02-15,After-School,Newark,Individual,289.8,6,18,32,144.7
+2025-02-15,After-School,Camden,Corporate,293.86,8,28,24,217.83
+2025-02-15,After-School,Paterson,Individual,293.4,8,23,28,120.81
+2025-02-15,Senior Meals,Paterson,State Grant,361.94,11,15,38,278.42
+2025-02-15,After-School,Paterson,Corporate,327.95,9,17,35,175.59
+2025-02-15,Food Pantry,Trenton,Federal,299.24,13,31,18,222.39
+2025-02-15,Food Pantry,Trenton,Corporate,207.77,8,24,29,90.01
+2025-02-15,Job Training,Paterson,Corporate,284.05,7,19,30,145.51
+2025-02-15,Job Training,Trenton,State Grant,244.16,5,12,32,176.92
+2025-02-15,Food Pantry,Paterson,State Grant,209.65,8,14,26,96.02
+2025-02-15,Job Training,Trenton,Individual,201.21,5,27,34,138.74
+2025-02-15,Senior Meals,Newark,State Grant,219.88,17,19,39,105.49
+2025-02-15,Food Pantry,Paterson,State Grant,267.42,8,22,42,161.7
+2025-02-15,Senior Meals,Newark,Federal,322.47,8,17,46,163.94
+2025-02-15,Job Training,Trenton,Corporate,314.47,11,11,27,155.78
+2025-02-15,Food Pantry,Newark,Federal,320.1,5,15,31,161.47
+2025-02-15,Youth Mentoring,Trenton,Individual,323.17,8,13,31,243.87
+2025-02-15,Food Pantry,Newark,Private Foundation,241.03,9,22,27,151.38
+2025-02-15,After-School,Newark,Individual,412.71,8,11,39,324.8
+2025-02-15,Job Training,Trenton,Individual,274.82,7,26,36,142.94
+2025-02-15,Youth Mentoring,Edison,State Grant,173.67,10,18,26,105.72
+2025-02-15,Youth Mentoring,Newark,Corporate,444.21,12,25,44,223.11
+2025-02-15,After-School,Paterson,Individual,340.44,8,20,30,229.1
+2025-02-15,After-School,Camden,,196.42,10,33,28,115.14
+2025-02-15,Job Training,Newark,Corporate,476.61,13,18,35,333.1
+2025-02-15,Job Training,Camden,Corporate,194.04,4,21,38,98.26
+2025-02-15,Food Pantry,Edison,Private Foundation,366.77,6,14,35,195.42
+2025-02-15,Youth Mentoring,Camden,Individual,246.35,6,20,33,165.15
+2025-03-15,Senior Meals,Camden,State Grant,430.12,8,16,25,293.32
+2025-03-15,After-School,Camden,Individual,248.85,7,13,37,175.87
+2025-03-15,Food Pantry,Newark,State Grant,204.23,7,32,36,150.08
+2025-03-15,Food Pantry,Newark,State Grant,306.55,11,22,28,125.56
+2025-03-15,Food Pantry,Trenton,Private Foundation,329.19,11,19,41,194.73
+2025-03-15,Job Training,Camden,State Grant,344.03,8,23,35,271.59
+2025-03-15,After-School,Camden,Individual,231.17,9,32,33,161.94
+2025-03-15,Senior Meals,Paterson,Individual,267.43,7,22,30,169.68
+2025-03-15,After-School,Paterson,Corporate,297.54,7,17,25,135.46
+2025-03-15,After-School,Edison,Private Foundation,380.18,12,21,42,233.15
+2025-03-15,Food Pantry,Trenton,Private Foundation,270.6,7,15,24,174.78
+2025-03-15,After-School,Newark,Individual,473.26,9,28,37,253.46
+2025-03-15,Job Training,Paterson,Individual,204.61,8,19,40,108.45
+2025-03-15,After-School,Newark,Private Foundation,448.42,6,22,38,270.27
+2025-03-15,Youth Mentoring,Camden,Corporate,127.87,8,27,37,75.88
+2025-03-15,Job Training,Edison,Private Foundation,113.52,11,13,40,69.7
+2025-03-15,Job Training,Edison,State Grant,359.26,11,21,36,284.7
+2025-03-15,Youth Mentoring,Newark,State Grant,158.58,10,30,39,112.32
+2025-03-15,Senior Meals,Edison,State Grant,366.21,13,21,32,279.76
+2025-03-15,After-School,Edison,State Grant,256.63,6,16,29,127.25
+2025-03-15,Senior Meals,Paterson,Individual,157.77,14,19,33,122.62
+2025-03-15,Senior Meals,Paterson,Private Foundation,398.74,8,12,37,276.56
+2025-03-15,After-School,Newark,Corporate,409.83,12,21,40,240.85
+2025-03-15,After-School,Edison,Individual,224.32,13,18,23,94.79
+2025-03-15,Food Pantry,Newark,Federal,192.76,13,23,34,154.02
+2025-03-15,After-School,Camden,Individual,353.26,8,17,38,274.52
+2025-03-15,Food Pantry,Paterson,Federal,283.16,7,27,11,195.73
+2025-03-15,After-School,Camden,Individual,200.9,9,20,39,137.68
+2025-03-15,Food Pantry,Camden,Private Foundation,387.48,4,31,29,259.91
+2025-03-15,Food Pantry,Edison,Corporate,376.5,8,21,19,260.45
+2025-03-15,Job Training,Newark,State Grant,345.5,10,23,28,147.96
+2025-03-15,Food Pantry,Paterson,State Grant,312.7,12,26,15,163.84
+2025-03-15,Youth Mentoring,Paterson,Individual,399.07,6,27,26,176.53
+2025-04-15,Food Pantry,Paterson,Corporate,127.5,12,23,42,69.53
+2025-04-15,Food Pantry,Edison,State Grant,174.59,10,37,56,82.67
+2025-04-15,Job Training,Edison,Individual,416.49,12,27,37,323.55
+2025-04-15,Senior Meals,Newark,Corporate,264.51,8,13,57,160.35
+2025-04-15,After-School,Paterson,Federal,288.18,9,17,30,211.14
+2025-04-15,After-School,Newark,State Grant,384.29,7,26,29,295.75
+2025-04-15,After-School,Edison,State Grant,431.0,6,21,29,252.12
+2025-04-15,After-School,Edison,Private Foundation,366.73,12,15,40,184.71
+2025-04-15,Job Training,Newark,Corporate,314.51,13,24,20,239.43
+2025-04-15,After-School,Newark,Federal,284.17,13,12,24,136.63
+2025-04-15,Youth Mentoring,Trenton,Corporate,254.56,5,29,19,107.18
+2025-04-15,Food Pantry,Paterson,State Grant,418.27,4,17,38,196.02
+2025-04-15,After-School,Edison,Individual,167.32,12,24,51,90.79
+2025-04-15,Senior Meals,Camden,Individual,321.22,11,24,41,193.32
+2025-04-15,After-School,Paterson,Corporate,370.46,5,17,36,225.02
+2025-04-15,Senior Meals,Edison,Federal,321.68,11,17,15,180.58
+2025-04-15,Job Training,Paterson,Individual,205.57,13,29,48,129.31
+2025-04-15,Food Pantry,Trenton,Corporate,210.55,12,17,40,109.34
+2025-04-15,Youth Mentoring,Trenton,Private Foundation,193.14,6,18,44,94.23
+2025-04-15,After-School,Edison,Federal,241.26,10,31,26,99.09
+2025-04-15,Job Training,Paterson,Corporate,202.49,9,18,43,156.27
+2025-04-15,Senior Meals,Trenton,Individual,284.47,13,23,34,204.82
+2025-04-15,Food Pantry,Camden,Federal,477.06,10,8,35,262.81
+2025-04-15,Food Pantry,Newark,Private Foundation,439.64,11,22,37,222.25
+2025-04-15,Food Pantry,Newark,Federal,57.7,7,29,47,24.0
+2025-04-15,Senior Meals,Paterson,Corporate,440.37,12,8,22,182.86
+2025-04-15,Food Pantry,Newark,State Grant,365.82,10,25,42,162.0
+2025-04-15,After-School,Edison,Individual,176.69,2,28,34,98.3
+2025-04-15,Job Training,Paterson,Private Foundation,268.08,9,25,32,202.97
+2025-04-15,Job Training,Trenton,Corporate,154.45,8,12,40,97.35
+2025-04-15,Senior Meals,Paterson,State Grant,222.3,7,33,29,170.27
+2025-04-15,Youth Mentoring,Edison,Private Foundation,150.6,9,18,27,115.83
+2025-04-15,Youth Mentoring,Trenton,Individual,173.14,11,21,27,135.74
+2025-04-15,Youth Mentoring,Edison,,252.57,12,31,27,180.65
+2025-04-15,Food Pantry,Edison,Individual,224.98,14,19,32,167.18
+2025-04-15,Senior Meals,Camden,State Grant,119.16,9,20,36,67.41
+2025-04-15,Job Training,Edison,Federal,100.02,12,22,31,51.08
+2025-04-15,Food Pantry,Edison,Corporate,152.68,11,21,23,67.03
+2025-04-15,Senior Meals,Camden,Private Foundation,351.82,10,24,44,211.21
+2025-04-15,Youth Mentoring,Paterson,Federal,242.18,5,19,29,163.08
+2025-04-15,Senior Meals,Trenton,State Grant,287.72,7,39,43,177.34
+2025-04-15,After-School,Camden,Corporate,331.78,7,21,35,143.57
+2025-04-15,Food Pantry,Newark,Corporate,139.71,5,19,50,89.9
+2025-04-15,After-School,Trenton,Private Foundation,324.83,7,25,32,241.36
+2025-05-15,Job Training,Camden,State Grant,330.51,16,33,33,215.6
+2025-05-15,Youth Mentoring,Edison,Corporate,317.15,12,22,38,175.52
+2025-05-15,Senior Meals,Paterson,Federal,493.34,8,19,26,277.29
+2025-05-15,After-School,Newark,Corporate,89.63,11,28,41,70.78
+2025-05-15,Job Training,Newark,Individual,360.22,7,26,35,227.99
+2025-05-15,Job Training,Paterson,Federal,220.54,9,23,40,113.29
+2025-05-15,Job Training,Edison,Individual,89.41,10,31,33,42.02
+2025-05-15,After-School,Edison,Private Foundation,221.41,17,25,35,89.44
+2025-05-15,Youth Mentoring,Trenton,Private Foundation,163.12,9,23,39,83.95
+2025-05-15,Food Pantry,Newark,Federal,293.97,9,8,45,154.39
+2025-05-15,Youth Mentoring,Trenton,Federal,127.58,13,23,34,61.38
+2025-05-15,After-School,Newark,State Grant,306.44,11,21,16,205.29
+2025-05-15,Senior Meals,Paterson,State Grant,449.82,12,30,44,228.58
+2025-05-15,After-School,Paterson,Individual,308.29,9,28,38,188.84
+2025-05-15,Senior Meals,Newark,Individual,278.13,6,26,32,127.01
+2025-05-15,After-School,Newark,Private Foundation,418.75,13,20,45,183.59
+2025-05-15,Senior Meals,Paterson,Corporate,280.08,9,19,38,196.82
+2025-05-15,After-School,Camden,,320.43,4,16,39,133.5
+2025-05-15,Food Pantry,Paterson,Federal,296.95,10,24,41,210.71
+2025-05-15,Food Pantry,Camden,State Grant,226.63,11,27,33,104.68
+2025-05-15,Job Training,Paterson,Individual,333.95,9,30,31,200.07
+2025-05-15,After-School,Trenton,Individual,213.93,9,22,23,129.27
+2025-05-15,After-School,Newark,Private Foundation,174.24,11,23,35,85.22
+2025-05-15,Senior Meals,Trenton,Private Foundation,201.78,11,19,40,134.1
+2025-05-15,Job Training,Newark,State Grant,183.62,12,24,38,113.33
+2025-05-15,Job Training,Trenton,Corporate,191.01,9,19,27,138.2
+2025-05-15,Job Training,Trenton,Federal,335.41,6,19,36,226.16
+2025-05-15,After-School,Edison,State Grant,334.22,4,24,30,163.23
+2025-05-15,Job Training,Camden,Private Foundation,266.3,7,20,57,153.17
+2025-05-15,Food Pantry,Newark,State Grant,203.28,8,30,29,102.51
+2025-05-15,Food Pantry,Trenton,Corporate,348.48,10,24,33,182.05
+2025-05-15,Youth Mentoring,Camden,Federal,374.55,6,13,20,234.6
+2025-05-15,After-School,Camden,Federal,336.41,14,18,44,267.75
+2025-05-15,Youth Mentoring,Camden,Federal,308.42,10,21,34,159.53
+2025-05-15,Food Pantry,Paterson,Individual,227.5,9,17,35,117.43
+2025-06-15,Food Pantry,Camden,Corporate,243.9,14,29,27,141.95
+2025-06-15,Food Pantry,Camden,Private Foundation,420.8,2,23,30,230.0
+2025-06-15,Food Pantry,Camden,Federal,381.37,11,30,34,254.79
+2025-06-15,Job Training,Newark,Individual,279.99,11,22,27,153.35
+2025-06-15,Job Training,Paterson,State Grant,257.24,3,27,30,146.24
+2025-06-15,Job Training,Newark,Private Foundation,282.97,7,21,31,117.34
+2025-06-15,After-School,Trenton,Corporate,256.44,10,20,36,130.44
+2025-06-15,Youth Mentoring,Paterson,Federal,566.47,9,27,49,393.3
+2025-06-15,Food Pantry,Camden,Individual,319.22,10,25,47,200.82
+2025-06-15,After-School,Camden,State Grant,356.89,15,24,47,224.79
+2025-06-15,Job Training,Trenton,State Grant,204.77,8,29,41,101.35
+2025-06-15,Senior Meals,Camden,Corporate,316.05,9,20,43,209.08
+2025-06-15,Senior Meals,Newark,Individual,227.65,8,26,22,115.57
+2025-06-15,Senior Meals,Paterson,State Grant,385.36,11,16,27,283.96
+2025-06-15,Youth Mentoring,Paterson,Private Foundation,315.38,8,23,28,251.42
+2025-06-15,Food Pantry,Camden,Corporate,397.85,6,26,34,159.9
+2025-06-15,Senior Meals,Edison,Corporate,268.18,14,27,36,162.05
+2025-06-15,Senior Meals,Trenton,Individual,274.3,13,14,47,175.77
+2025-06-15,Youth Mentoring,Edison,Individual,294.39,11,21,39,195.06
+2025-06-15,Youth Mentoring,Camden,Private Foundation,220.17,15,10,46,119.85
+2025-06-15,Senior Meals,Trenton,Private Foundation,362.13,10,20,41,169.81
+2025-06-15,Senior Meals,Newark,Individual,314.8,9,27,32,176.48
+2025-06-15,Food Pantry,Paterson,Federal,243.59,10,17,27,122.64
+2025-06-15,Youth Mentoring,Newark,Federal,319.28,5,21,46,219.22
+2025-06-15,Youth Mentoring,Trenton,Private Foundation,291.09,12,33,34,225.92
+2025-06-15,After-School,Paterson,Individual,164.88,8,8,43,120.17
+2025-06-15,Food Pantry,Trenton,Federal,217.02,7,20,36,156.81
+2025-06-15,Food Pantry,Newark,Federal,426.02,10,33,44,247.76
+2025-06-15,After-School,Newark,Private Foundation,252.42,13,27,42,192.81
+2025-06-15,Food Pantry,Edison,State Grant,435.29,11,20,49,189.33
+2025-06-15,After-School,Paterson,Federal,323.15,7,27,24,158.69
+2025-06-15,Food Pantry,Edison,Corporate,166.08,6,21,28,118.65
+2025-06-15,Senior Meals,Newark,Private Foundation,273.46,14,23,49,152.71
+2025-06-15,After-School,Trenton,Private Foundation,154.47,12,19,44,100.36
+2025-06-15,Job Training,Paterson,Private Foundation,358.9,13,26,35,253.29
+2025-06-15,Senior Meals,Newark,Corporate,363.08,9,20,31,228.17
+2025-06-15,Food Pantry,Camden,Individual,275.84,11,13,28,145.17
+2025-06-15,Food Pantry,Camden,Individual,315.52,8,11,30,214.64
+2025-06-15,After-School,Camden,State Grant,333.1,5,15,41,260.19
+2025-06-15,After-School,Trenton,Private Foundation,211.0,11,25,52,117.15
+2025-07-15,Food Pantry,Newark,Federal,338.42,8,27,48,201.18
+2025-07-15,Food Pantry,Trenton,Private Foundation,132.13,12,29,42,97.78
+2025-07-15,Job Training,Edison,Private Foundation,360.94,9,32,46,286.0
+2025-07-15,After-School,Camden,Private Foundation,307.05,15,31,41,233.07
+2025-07-15,After-School,Newark,Private Foundation,368.93,11,19,38,191.86
+2025-07-15,Senior Meals,Newark,Individual,318.13,16,24,21,141.82
+2025-07-15,Food Pantry,Paterson,Corporate,366.0,0,33,40,206.68
+2025-07-15,Youth Mentoring,Paterson,Private Foundation,296.23,11,17,37,170.28
+2025-07-15,Youth Mentoring,Paterson,Individual,349.69,13,16,44,218.17
+2025-07-15,Senior Meals,Edison,Private Foundation,416.84,10,18,22,238.58
+2025-07-15,Food Pantry,Trenton,Individual,220.77,7,20,38,114.82
+2025-07-15,After-School,Newark,Corporate,236.72,6,19,40,151.24
+2025-07-15,Job Training,Trenton,Private Foundation,344.43,10,21,51,232.62
+2025-07-15,After-School,Trenton,State Grant,305.6,9,33,39,167.31
+2025-07-15,After-School,Edison,Corporate,213.09,6,29,43,126.76
+2025-07-15,Senior Meals,Paterson,State Grant,250.12,11,20,48,183.35
+2025-07-15,Senior Meals,Edison,Federal,301.8,11,12,42,145.23
+2025-07-15,Senior Meals,Paterson,Federal,301.12,12,11,46,228.54
+2025-07-15,After-School,Trenton,Federal,346.56,10,18,25,264.9
+2025-07-15,Senior Meals,Trenton,State Grant,348.05,9,23,36,191.49
+2025-07-15,After-School,Paterson,State Grant,360.86,10,26,39,172.42
+2025-07-15,Youth Mentoring,Trenton,,251.19,17,19,34,197.37
+2025-07-15,Youth Mentoring,Trenton,Federal,396.25,9,25,35,168.65
+2025-07-15,After-School,Edison,Individual,276.92,8,30,39,146.81
+2025-07-15,Youth Mentoring,Camden,Federal,448.55,13,24,41,270.71
+2025-07-15,Youth Mentoring,Camden,,244.46,12,21,60,185.06
+2025-07-15,Senior Meals,Paterson,Individual,476.86,8,29,45,215.16
+2025-07-15,Youth Mentoring,Trenton,State Grant,303.12,14,18,20,169.65
+2025-07-15,After-School,Trenton,Individual,287.09,9,18,27,119.79
+2025-07-15,After-School,Paterson,Corporate,286.06,8,8,29,147.12
+2025-07-15,Youth Mentoring,Paterson,Federal,238.58,12,18,37,148.51
+2025-07-15,Food Pantry,Trenton,Private Foundation,294.97,9,26,44,210.2
+2025-08-15,Senior Meals,Camden,Individual,108.91,5,27,47,51.27
+2025-08-15,Food Pantry,Newark,Federal,215.94,9,21,38,133.96
+2025-08-15,Job Training,Camden,Individual,369.96,11,28,36,216.99
+2025-08-15,Senior Meals,Paterson,State Grant,497.13,14,25,49,290.72
+2025-08-15,Senior Meals,Edison,Federal,399.6,12,31,42,164.93
+2025-08-15,Food Pantry,Edison,State Grant,234.18,7,21,39,131.01
+2025-08-15,Youth Mentoring,Paterson,Individual,286.65,12,35,37,190.75
+2025-08-15,Job Training,Edison,Corporate,462.04,7,18,55,253.4
+2025-08-15,Food Pantry,Trenton,Individual,312.89,15,24,45,178.98
+2025-08-15,Youth Mentoring,Paterson,Corporate,169.19,11,31,45,122.42
+2025-08-15,After-School,Newark,Private Foundation,385.8,13,43,30,223.09
+2025-08-15,Food Pantry,Newark,State Grant,333.15,11,31,39,188.17
+2025-08-15,Food Pantry,Paterson,Private Foundation,408.64,6,25,45,243.79
+2025-08-15,Senior Meals,Trenton,Federal,341.57,10,20,41,271.44
+2025-08-15,Food Pantry,Trenton,State Grant,424.36,5,18,39,186.5
+2025-08-15,Senior Meals,Edison,Individual,405.05,10,23,36,249.88
+2025-08-15,Senior Meals,Trenton,Corporate,424.53,13,18,42,174.04
+2025-08-15,Youth Mentoring,Paterson,Individual,494.0,12,22,56,360.83
+2025-08-15,After-School,Camden,,275.55,10,23,37,144.05
+2025-08-15,After-School,Edison,Corporate,416.34,8,31,40,258.51
+2025-08-15,Youth Mentoring,Newark,Federal,308.95,8,29,40,205.91
+2025-08-15,After-School,Camden,State Grant,323.21,8,27,44,224.02
+2025-08-15,After-School,Edison,Federal,332.14,6,28,24,146.27
+2025-08-15,Senior Meals,Edison,Corporate,366.4,10,33,21,188.9
+2025-08-15,Job Training,Trenton,Federal,303.18,14,30,51,169.44
+2025-08-15,Youth Mentoring,Trenton,Individual,291.71,12,21,50,184.41
+2025-08-15,Food Pantry,Paterson,Federal,317.39,7,33,50,146.49
+2025-08-15,Job Training,Newark,State Grant,504.11,12,27,35,289.97
+2025-08-15,Youth Mentoring,Camden,Private Foundation,385.44,9,19,24,241.57
+2025-08-15,Job Training,Camden,Federal,270.01,10,28,34,183.31
+2025-08-15,Food Pantry,Newark,,324.68,8,22,52,190.48
+2025-08-15,Youth Mentoring,Newark,Corporate,382.2,12,25,41,267.98
+2025-08-15,Food Pantry,Paterson,State Grant,386.47,12,32,34,172.63
+2025-08-15,Senior Meals,Camden,Private Foundation,324.72,15,26,29,220.73
+2025-08-15,After-School,Paterson,State Grant,297.27,12,25,45,152.49
+2025-08-15,Senior Meals,Camden,Corporate,288.8,9,30,42,164.91
+2025-08-15,Senior Meals,Camden,Corporate,401.53,12,28,45,319.72
+2025-08-15,Senior Meals,Paterson,Individual,283.9,11,23,20,188.52
+2025-08-15,Job Training,Paterson,Federal,372.0,12,21,54,264.09
+2025-08-15,Youth Mentoring,Paterson,Federal,364.8,10,16,26,206.24
+2025-08-15,Food Pantry,Camden,Federal,353.65,7,26,51,207.73
+2025-08-15,Senior Meals,Newark,State Grant,527.61,14,20,44,332.71
+2025-09-15,Senior Meals,Camden,Corporate,350.53,11,19,35,277.96
+2025-09-15,Senior Meals,Camden,Federal,275.9,11,18,34,157.35
+2025-09-15,Job Training,Paterson,Individual,469.91,10,18,39,312.31
+2025-09-15,After-School,Trenton,Individual,313.17,11,20,39,238.04
+2025-09-15,Senior Meals,Edison,State Grant,356.13,11,23,32,273.37
+2025-09-15,Job Training,Camden,State Grant,374.21,12,26,41,198.32
+2025-09-15,Senior Meals,Camden,Individual,262.24,11,29,52,152.45
+2025-09-15,Job Training,Newark,Federal,287.9,5,29,42,156.92
+2025-09-15,Job Training,Edison,Private Foundation,297.39,9,26,54,120.49
+2025-09-15,Senior Meals,Paterson,Individual,303.19,12,22,51,163.72
+2025-09-15,Senior Meals,Edison,Individual,428.79,2,26,39,321.99
+2025-09-15,Food Pantry,Edison,Federal,279.13,6,18,39,184.08
+2025-09-15,Youth Mentoring,Newark,Corporate,424.75,10,20,51,288.01
+2025-09-15,Job Training,Newark,Corporate,364.16,6,23,48,172.44
+2025-09-15,After-School,Camden,Corporate,301.71,11,24,29,141.56
+2025-09-15,Job Training,Trenton,Individual,324.39,9,25,49,164.8
+2025-09-15,Senior Meals,Camden,Federal,250.82,14,24,33,123.35
+2025-09-15,After-School,Paterson,Individual,339.88,10,24,40,258.27
+2025-09-15,Job Training,Newark,Private Foundation,238.98,14,18,39,103.88
+2025-09-15,Senior Meals,Paterson,Individual,251.6,13,31,41,163.34
+2025-09-15,Job Training,Edison,Private Foundation,244.46,11,31,32,107.43
+2025-09-15,After-School,Newark,State Grant,359.79,14,22,31,267.81
+2025-09-15,Job Training,Trenton,Private Foundation,290.87,8,23,39,156.33
+2025-09-15,Food Pantry,Camden,Individual,361.75,11,30,52,158.64
+2025-09-15,Youth Mentoring,Newark,Corporate,368.13,12,11,43,197.01
+2025-09-15,Senior Meals,Newark,Individual,427.83,11,27,48,337.33
+2025-09-15,Senior Meals,Newark,Federal,331.46,8,28,49,217.74
+2025-09-15,Job Training,Trenton,Corporate,413.04,13,17,29,241.69
+2025-09-15,Job Training,Camden,Individual,391.38,5,26,44,210.45
+2025-09-15,Youth Mentoring,Paterson,Private Foundation,539.13,9,33,45,372.55
+2025-09-15,Youth Mentoring,Newark,State Grant,221.29,10,22,34,169.6
+2025-09-15,Senior Meals,Edison,Individual,253.58,10,28,54,126.09
+2025-09-15,Food Pantry,Edison,Individual,387.13,13,31,39,163.68
+2025-09-15,Food Pantry,Paterson,Federal,403.16,6,22,30,240.48
+2025-09-15,After-School,Edison,Corporate,339.34,9,21,42,168.2
+2025-09-15,Senior Meals,Camden,Federal,467.37,14,28,48,212.65
+2025-09-15,Food Pantry,Camden,Private Foundation,306.1,12,38,43,181.74
+2025-09-15,After-School,Paterson,Individual,324.45,6,22,31,190.81
+2025-09-15,Food Pantry,Camden,Federal,397.16,5,28,43,175.8
+2025-09-15,Job Training,Edison,Federal,279.11,9,29,41,112.45
+2025-09-15,Youth Mentoring,Paterson,Federal,399.97,11,29,42,243.08
+2025-09-15,Youth Mentoring,Paterson,Private Foundation,246.27,12,26,40,169.58
+2024-01-15,Senior Meals,Trenton,Private Foundation,185.41,4,4,32,80.14
