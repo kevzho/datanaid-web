@@ -6,6 +6,7 @@ import { WorkflowSection } from "@/components/landing/WorkflowSection";
 import { UseCasesSection } from "@/components/landing/UseCasesSection";
 import { CTASection } from "@/components/landing/CTASection";
 import { Footer } from "@/components/landing/Footer";
+import { UsageStats } from "@/components/usage/UsageStats";
 
 export default function LandingPage() {
   return (
@@ -13,6 +14,7 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <HeroSection />
+        <UsageStats />
         <ProblemSection />
         <FeaturesGrid />
         <WorkflowSection />

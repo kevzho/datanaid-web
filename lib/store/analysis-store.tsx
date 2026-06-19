@@ -7,6 +7,7 @@ import type {
   InsightCategory,
   ParsedDataset,
 } from "@/types/dataset";
+import { getJsonUsageHeaders } from "@/lib/usage/client";
 
 interface AnalysisState {
   dataset: ParsedDataset | null;
@@ -34,8 +35,6 @@ const initialState: AnalysisState = {
 };
 
 const AnalysisContext = React.createContext<AnalysisContextValue | null>(null);
-const VISITOR_ID_KEY = "datanaid_visitor_id";
-const SESSION_ID_KEY = "datanaid_session_id";
 
 const INSIGHT_CATEGORIES: InsightCategory[] = [
   "finding",
@@ -99,48 +98,6 @@ function normalizeAnalysisResult(result: AnalysisResult): AnalysisResult {
   };
 }
 
-function randomId(prefix: string): string {
-  const cryptoObj = typeof crypto !== "undefined" ? crypto : null;
-  if (cryptoObj && "randomUUID" in cryptoObj) {
-    return `${prefix}_${cryptoObj.randomUUID()}`;
-  }
-  return `${prefix}_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
-}
-
-function getStoredId(
-  storage: Storage | null,
-  key: string,
-  prefix: string
-): string {
-  if (typeof window === "undefined") return randomId(prefix);
-  const next = randomId(prefix);
-  if (!storage) return next;
-  try {
-    const existing = storage.getItem(key);
-    if (existing) return existing;
-    storage.setItem(key, next);
-  } catch {
-    return next;
-  }
-  return next;
-}
-
-function getUsageHeaders(): HeadersInit {
-  return {
-    "Content-Type": "application/json",
-    "X-Datanaid-Visitor-Id": getStoredId(
-      typeof window !== "undefined" ? window.localStorage : null,
-      VISITOR_ID_KEY,
-      "visitor"
-    ),
-    "X-Datanaid-Session-Id": getStoredId(
-      typeof window !== "undefined" ? window.sessionStorage : null,
-      SESSION_ID_KEY,
-      "session"
-    ),
-  };
-}
-
 export function AnalysisProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<AnalysisState>(initialState);
   const datasetRef = React.useRef<ParsedDataset | null>(null);
@@ -160,7 +117,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
-        headers: getUsageHeaders(),
+        headers: getJsonUsageHeaders(),
         body: JSON.stringify({ dataset, persist }),
       });
       const data = await res.json();

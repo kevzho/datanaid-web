@@ -180,14 +180,27 @@ The MIT License permits commercial and internal use without requiring derivative
 
 ## Anonymous Usage Tracking
 
-Datanaid is free to use and does not require accounts. To understand usage, each completed analysis records a small anonymous event:
+Datanaid is free to use and does not require accounts. To understand usage, the landing page records a page-view event and each completed analysis records a completed-analysis event:
 
 - Anonymous browser visitor ID and session ID
-- Analysis ID, timestamp, file extension, row count, and column count
+- Page path, analysis ID, timestamp, file extension, row count, and column count
 - Counts for insights, trends, forecasts, and risks
 - Hashed IP/user-agent metadata for coarse duplicate detection
 
-Raw uploaded rows and cell values are never written to usage events. When `BLOB_READ_WRITE_TOKEN` is configured, events are saved under `usage-events/YYYY-MM-DD/<analysis-id>.json` in Vercel Blob. Without Blob, events are emitted to server logs as `datanaid_usage_event`.
+Raw uploaded rows and cell values are never written to usage events. When `BLOB_READ_WRITE_TOKEN` is configured, events are saved under `usage-events/YYYY-MM-DD/<event>.json` in Vercel Blob. Without Blob, events are emitted to server logs as `datanaid_usage_event` and summarized from in-memory dev events.
+
+The landing page includes a live usage strip that refreshes every 30 seconds:
+
+- Unique visitors = distinct anonymous visitors with any tracked event.
+- Tool users = distinct anonymous visitors with `analysis_completed`.
+- Analyses run = count of `analysis_completed` events.
+- Conversion = tool users divided by unique visitors.
+
+The same numbers are available as JSON at:
+
+```text
+/api/usage/stats
+```
 
 ---
 
