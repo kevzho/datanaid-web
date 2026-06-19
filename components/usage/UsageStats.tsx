@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { Activity, MousePointerClick, Upload, Users } from "lucide-react";
+import { Upload, Users } from "lucide-react";
 import { getJsonUsageHeaders } from "@/lib/usage/client";
 
 interface UsageStatsPayload {
@@ -9,7 +9,6 @@ interface UsageStatsPayload {
   uniqueUsers: number;
   pageViews: number;
   submissions: number;
-  conversionRate: number;
   storage: "blob" | "memory";
 }
 
@@ -18,12 +17,15 @@ const emptyStats: UsageStatsPayload = {
   uniqueUsers: 0,
   pageViews: 0,
   submissions: 0,
-  conversionRate: 0,
   storage: "memory",
 };
 
 function formatCount(value: number): string {
   return new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(value);
+}
+
+function roundedThreshold(value: number, minimum: number): number {
+  return Math.max(minimum, Math.ceil(value / 5) * 5);
 }
 
 export function UsageStats() {
@@ -52,32 +54,36 @@ export function UsageStats() {
     return () => window.clearInterval(id);
   }, [refresh]);
 
-  const items = [
-    { label: "Unique visitors", value: stats.uniqueVisitors, icon: Users },
-    { label: "Tool users", value: stats.uniqueUsers, icon: MousePointerClick },
-    { label: "Analyses run", value: stats.submissions, icon: Upload },
-    { label: "Conversion", value: `${stats.conversionRate}%`, icon: Activity },
-  ];
+  const trustedUsers = roundedThreshold(stats.uniqueUsers, 5);
+  const totalUses = roundedThreshold(stats.submissions, 10);
 
   return (
     <section className="border-y border-border bg-muted/30">
-      <div className="container grid gap-3 py-4 sm:grid-cols-2 lg:grid-cols-4">
-        {items.map((item) => {
-          const Icon = item.icon;
-          return (
-            <div key={item.label} className="flex items-center gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border bg-background text-primary">
-                <Icon className="h-4 w-4" />
-              </div>
-              <div>
-                <p className="text-lg font-semibold tabular-nums text-foreground">
-                  {typeof item.value === "number" ? formatCount(item.value) : item.value}
-                </p>
-                <p className="text-xs text-muted-foreground">{item.label}</p>
-              </div>
-            </div>
-          );
-        })}
+      <div className="container flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-center sm:gap-8">
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border bg-background text-primary">
+            <Users className="h-4 w-4" />
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Trusted by{" "}
+            <span className="font-semibold tabular-nums text-foreground">
+              {formatCount(trustedUsers)}+
+            </span>{" "}
+            users
+          </p>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border bg-background text-primary">
+            <Upload className="h-4 w-4" />
+          </div>
+          <p className="text-sm text-muted-foreground">
+            Used{" "}
+            <span className="font-semibold tabular-nums text-foreground">
+              {formatCount(totalUses)}+
+            </span>{" "}
+            times
+          </p>
+        </div>
       </div>
     </section>
   );

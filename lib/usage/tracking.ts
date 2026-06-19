@@ -41,7 +41,6 @@ export interface UsageStats {
   uniqueUsers: number;
   pageViews: number;
   submissions: number;
-  conversionRate: number;
   lastUpdated: string;
   storage: "blob" | "memory";
 }
@@ -166,7 +165,6 @@ function summarize(events: UsageEvent[], storage: UsageStats["storage"]): UsageS
     uniqueUsers: users.size,
     pageViews,
     submissions,
-    conversionRate: visitors.size ? Math.round((users.size / visitors.size) * 1000) / 10 : 0,
     lastUpdated: new Date().toISOString(),
     storage,
   };

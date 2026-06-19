@@ -191,10 +191,8 @@ Raw uploaded rows and cell values are never written to usage events. When `BLOB_
 
 The landing page includes a live usage strip that refreshes every 30 seconds:
 
-- Unique visitors = distinct anonymous visitors with any tracked event.
-- Tool users = distinct anonymous visitors with `analysis_completed`.
-- Analyses run = count of `analysis_completed` events.
-- Conversion = tool users divided by unique visitors.
+- Trusted users = distinct anonymous visitors with `analysis_completed`, rounded up to a multiple of 5 with a minimum of 5.
+- Uses = count of `analysis_completed` events, rounded up to a multiple of 5 with a minimum of 10.
 
 The same numbers are available as JSON at:
 
