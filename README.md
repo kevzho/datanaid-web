@@ -18,7 +18,7 @@ Datanaid is a self-serve analytics product for mission-driven organizations. Upl
 
 - **Profiles** every column — types, missing values, duplicates, outliers, and a data-quality score (A–F).
 - **Analyzes** trends, growth, rolling averages, category breakdowns, and correlations.
-- **Models** the future with a built-in linear forecast (confidence intervals included), plus optional Prophet/XGBoost forecasting via a Python serverless function.
+- **Models** the future with a built-in linear forecast (confidence intervals included), plus optional heavy forecasting via a separately hosted Python service.
 - **Explains** findings with a **hybrid insight engine** — every insight is grounded in computed statistics. An optional LLM only *rephrases* those grounded facts into polished prose; it never invents new claims.
 - **Exports** a complete Impact Report as Markdown or print-to-PDF.
 
@@ -50,7 +50,7 @@ Every chart ships with three plain-language annotations: **What this means**, **
 - **Forms & validation:** React Hook Form + Zod
 - **Data parsing:** PapaParse (CSV), SheetJS / `xlsx` (Excel)
 - **Analytics & ML:** Custom TypeScript engine in `lib/analytics` (profiling, trends, K-Means, anomaly detection, linear forecasting)
-- **Heavy ML (optional):** Python serverless function (`api/forecast.py`) with Prophet + XGBoost
+- **Forecast service (optional):** Python serverless function (`api/forecast.py`) with a deploy-safe pure-Python linear fallback
 - **Persistence:** Vercel Blob
 - **Deployment:** Vercel
 
@@ -75,7 +75,7 @@ datanaid-web/
 │   ├── page.tsx               # Marketing landing page
 │   └── globals.css            # Design tokens + print stylesheet
 ├── api/
-│   ├── forecast.py            # Optional Prophet/XGBoost serverless fn
+│   ├── forecast.py            # Optional pure-Python forecast serverless fn
 │   └── requirements.txt
 ├── components/
 │   ├── ui/                    # shadcn/ui primitives
@@ -140,7 +140,7 @@ All variables are **optional for local development**. The app degrades gracefull
 | `GROQ_API_KEY` | Optional | Enables LLM **phrasing** of the deterministic insights through Groq's OpenAI-compatible API. Without it, Datanaid uses high-quality deterministic templates. The LLM is strictly constrained to computed statistics — it never introduces new facts. |
 | `GROQ_PHRASING_MODEL` | Optional | Groq model used for insight phrasing only. Defaults to `llama-3.1-8b-instant` for free-tier headroom and low latency. |
 | `GROQ_PHRASING_MAX_TOKENS` | Optional | Max output tokens per phrasing call. Defaults to `220`. |
-| `PYTHON_ML_URL` | Optional | URL of the deployed Python forecasting function. Only needed if you host `api/forecast.py` separately from the Next.js app. When unset, the built-in TypeScript linear forecast is used. |
+| `PYTHON_ML_URL` | Optional | URL of a separately hosted Python forecasting service. When unset, the built-in TypeScript linear forecast is used. |
 
 See [`.env.example`](./.env.example) for inline documentation.
 
@@ -190,17 +190,17 @@ Result: polished prose with zero fabricated facts. Without a key, the determinis
 
 ---
 
-## Python ML Function (Optional Heavy Forecasting)
+## Python Forecast Function
 
-The TypeScript engine ships a linear forecast with confidence intervals that works out of the box. For Prophet / XGBoost forecasting, Datanaid includes a Python serverless function:
+The TypeScript engine ships a linear forecast with confidence intervals that works out of the box. Datanaid also includes a small Python serverless function with the same deploy-safe pure-Python linear fallback:
 
 - **File:** `api/forecast.py`
-- **Dependencies:** `api/requirements.txt` (Prophet, pandas, numpy, XGBoost, scikit-learn)
+- **Dependencies:** `api/requirements.txt` is intentionally empty for Vercel Hobby/free deployments.
 - **Vercel config:** `vercel.json` allocates 1024 MB and a 60 s max duration to the function.
 
 On Vercel, files under `api/` with a `.py` extension are automatically deployed as Python serverless functions when `requirements.txt` is present. No extra wiring is required for a same-project deployment.
 
-> **Note on bundle size:** Prophet and its compiled dependencies are large. If the Vercel build exceeds the function size limit on the Hobby tier, comment out `prophet`/`xgboost` in `requirements.txt` — the endpoint gracefully falls back to a pure-Python linear forecast, and the app still works end-to-end.
+> **Note on bundle size:** Prophet, pandas, numpy, XGBoost, and scikit-learn exceeded Vercel's Python serverless storage limit in this project. Keep those out of `api/requirements.txt` for Vercel deployments. If you want heavy Prophet/XGBoost forecasting later, host it as a separate Python service and point `PYTHON_ML_URL` at that service.
 
 ---
 
@@ -211,7 +211,7 @@ On Vercel, files under `api/` with a `.py` extension are automatically deployed 
 3. Vercel auto-detects Next.js — no build settings changes needed.
 4. **Add a Blob store:** in the project, go to **Storage → Create → Blob**. Vercel injects `BLOB_READ_WRITE_TOKEN` automatically. (Or add it manually under **Settings → Environment Variables**.)
 5. *(Optional)* Add `GROQ_API_KEY` (and optionally `GROQ_PHRASING_MODEL`) to enable LLM insight phrasing.
-6. *(Optional)* If you host the Python function separately, add `PYTHON_ML_URL`. For a standard single-project deploy, the Python function deploys automatically alongside the app.
+6. *(Optional)* If you host a heavier Python forecasting service separately, add `PYTHON_ML_URL`. For a standard single-project deploy, the lightweight Python function deploys automatically alongside the app.
 7. Click **Deploy**.
 
 After the first deploy, every push to the connected branch triggers an automatic redeploy.

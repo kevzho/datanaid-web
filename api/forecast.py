@@ -2,12 +2,14 @@
 Datanaid — Heavy ML forecasting microservice (Vercel Python runtime).
 
 This is an OPTIONAL accelerator. The TypeScript engine already ships a linear
-forecast with confidence intervals that works with zero configuration. When you
-deploy this function and set PYTHON_ML_URL, the app can request a richer forecast
-powered by Prophet (seasonality-aware) or an XGBoost regressor.
+forecast with confidence intervals that works with zero configuration. This
+Vercel function intentionally uses a pure-Python linear fallback so deployment
+stays under serverless bundle/storage limits.
 
 Vercel auto-detects files under /api/*.py as Python serverless functions and
-installs api/requirements.txt. No extra config needed.
+installs api/requirements.txt. Keep api/requirements.txt empty for Vercel
+Hobby/free deployments. For Prophet/XGBoost, host a separate Python service and
+point PYTHON_ML_URL at it.
 
 Contract
 --------
@@ -22,7 +24,7 @@ Body: {
 }
 
 Response: {
-  "method": "prophet",
+  "method": "linear",
   "metric": "donations",
   "forecast": [{"period": "2024-07", "value": ..., "lower": ..., "upper": ...}, ...],
   "r2": 0.82
