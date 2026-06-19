@@ -103,6 +103,7 @@ export interface DatasetProfile {
   memoryEstimateKb: number;
   qualityScore: QualityScore;
   detectedDomains: SemanticRole[];
+  categoryNormalizationIssues?: CategoryNormalizationIssue[];
 }
 
 export interface QualityScore {
@@ -126,10 +127,18 @@ export interface QualityIssue {
     | "duplicate_rows"
     | "type_inconsistency"
     | "outliers"
+    | "category_inconsistency"
     | "constant_column"
     | "high_cardinality"
     | "mixed_types";
   message: string;
+  affected: number;
+}
+
+export interface CategoryNormalizationIssue {
+  column: string;
+  normalizedValue: string;
+  variants: string[];
   affected: number;
 }
 
@@ -243,19 +252,37 @@ export interface ForecastResult {
 export type InsightCategory =
   | "finding"
   | "trend"
+  | "event"
   | "risk"
   | "opportunity"
   | "recommendation";
 
+export type InsightType = InsightCategory;
+export type InsightSeverity = "low" | "medium" | "high";
+export type InsightConfidence = "low" | "medium" | "high";
+
 /** The grounded insight contract — every field must trace to a computed stat. */
 export interface Insight {
   id: string;
-  category: InsightCategory;
-  /** Required structured contract from the master prompt. */
-  finding: string;
+  title: string;
+  type: InsightType;
+  severity: InsightSeverity;
+  confidence: InsightConfidence;
+  what_happened: string;
   evidence: string;
-  importance: "high" | "medium" | "low";
+  what_contributed: string;
+  potential_explanations: string[];
+  requires_investigation: boolean;
+  why_it_matters: string;
   recommended_action: string;
+  /**
+   * Compatibility aliases for existing UI/export code. `category` mirrors
+   * `type`, `finding` mirrors `what_happened`, and `importance` mirrors
+   * `severity`.
+   */
+  category: InsightCategory;
+  finding: string;
+  importance: InsightSeverity;
   /** Provenance — the exact metric + value this insight is grounded in. */
   metric: string;
   value: string | number;

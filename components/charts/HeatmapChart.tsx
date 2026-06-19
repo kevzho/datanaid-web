@@ -219,7 +219,7 @@ function buildHeatmapInsight(correlation: CorrelationData) {
 
   const why = hasData
     ? Math.abs(maxCorr) > 0.7
-      ? `A correlation of ${maxCorr.toFixed(2)} between "${labels[maxI]}" and "${labels[maxJ]}" suggests these metrics move together — they may share a common driver or causal relationship worth exploring.`
+      ? `A correlation of ${maxCorr.toFixed(2)} between "${labels[maxI]}" and "${labels[maxJ]}" shows these metrics moved together in the uploaded data. Treat this as association, not causation.`
       : `No extremely strong correlations were found, suggesting the numeric metrics in this dataset are relatively independent.`
     : "With fewer than 2 numeric columns, no pairwise correlations can be computed.";
 

@@ -197,14 +197,6 @@ export function HeroSection() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                <Link href="/upload">View Demo</Link>
-              </Button>
             </div>
 
             <p className="mt-4 text-xs text-muted-foreground">

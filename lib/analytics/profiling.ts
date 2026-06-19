@@ -1,5 +1,6 @@
 import type {
   CategoricalStats,
+  CategoryNormalizationIssue,
   ColumnProfile,
   ColumnType,
   DataRow,
@@ -159,7 +160,8 @@ function buildQualityScore(
   columns: ColumnProfile[],
   totalMissingPct: number,
   duplicatePct: number,
-  rows: DataRow[]
+  rows: DataRow[],
+  categoryNormalizationIssues: CategoryNormalizationIssue[] = []
 ): QualityScore {
   const issues: QualityIssue[] = [];
 
@@ -208,9 +210,23 @@ function buildQualityScore(
     });
   }
 
+  for (const issue of categoryNormalizationIssues) {
+    issues.push({
+      severity: issue.affected >= Math.max(10, rows.length * 0.05) ? "medium" : "low",
+      column: issue.column,
+      type: "category_inconsistency",
+      message: `${issue.column} had inconsistent labels for "${issue.normalizedValue}" (${issue.variants.join(", ")}).`,
+      affected: issue.affected,
+    });
+  }
+
   // Consistency: penalize columns we couldn't confidently type as text fallback
   const textCols = columns.filter((c) => c.type === "text").length;
-  const consistency = Math.max(60, 100 - (textCols / Math.max(1, columns.length)) * 40);
+  const categoryPenalty = Math.min(25, categoryNormalizationIssues.length * 4);
+  const consistency = Math.max(
+    60,
+    100 - (textCols / Math.max(1, columns.length)) * 40 - categoryPenalty
+  );
 
   // Validity: numeric columns with extreme negatives where unexpected, etc. (light)
   let validityPenalty = 0;
@@ -250,7 +266,10 @@ function buildQualityScore(
   };
 }
 
-export function profileDataset(dataset: ParsedDataset): DatasetProfile {
+export function profileDataset(
+  dataset: ParsedDataset,
+  categoryNormalizationIssues: CategoryNormalizationIssue[] = []
+): DatasetProfile {
   const { rows, headers, fileName } = dataset;
   const columns = headers.map((h) => profileColumn(rows, h));
 
@@ -271,7 +290,13 @@ export function profileDataset(dataset: ParsedDataset): DatasetProfile {
     new Set(columns.map((c) => c.semantic).filter((s): s is SemanticRole => !!s && s !== "unknown"))
   );
 
-  const qualityScore = buildQualityScore(columns, totalMissingPct, duplicatePct, rows);
+  const qualityScore = buildQualityScore(
+    columns,
+    totalMissingPct,
+    duplicatePct,
+    rows,
+    categoryNormalizationIssues
+  );
 
   // Rough memory estimate
   const memoryEstimateKb = Math.round((totalCells * 16) / 1024);
@@ -291,5 +316,6 @@ export function profileDataset(dataset: ParsedDataset): DatasetProfile {
     memoryEstimateKb,
     qualityScore,
     detectedDomains,
+    categoryNormalizationIssues,
   };
 }

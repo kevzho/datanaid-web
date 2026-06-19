@@ -1,7 +1,12 @@
 "use client";
 
 import * as React from "react";
-import type { AnalysisResult, ParsedDataset } from "@/types/dataset";
+import type {
+  AnalysisResult,
+  Insight,
+  InsightCategory,
+  ParsedDataset,
+} from "@/types/dataset";
 
 interface AnalysisState {
   dataset: ParsedDataset | null;
@@ -29,6 +34,112 @@ const initialState: AnalysisState = {
 };
 
 const AnalysisContext = React.createContext<AnalysisContextValue | null>(null);
+const VISITOR_ID_KEY = "datanaid_visitor_id";
+const SESSION_ID_KEY = "datanaid_session_id";
+
+const INSIGHT_CATEGORIES: InsightCategory[] = [
+  "finding",
+  "trend",
+  "event",
+  "risk",
+  "opportunity",
+  "recommendation",
+];
+
+function normalizeInsight(insight: Partial<Insight>): Insight {
+  const type = insight.type ?? insight.category ?? "finding";
+  const severity = insight.severity ?? insight.importance ?? "medium";
+  const whatHappened = insight.what_happened ?? insight.finding ?? "";
+
+  return {
+    id: insight.id ?? `insight-${Math.random().toString(36).slice(2, 10)}`,
+    title: insight.title ?? whatHappened.split(".")[0] ?? "Insight",
+    type,
+    severity,
+    confidence: insight.confidence ?? "medium",
+    what_happened: whatHappened,
+    evidence: insight.evidence ?? "Computed from the uploaded data.",
+    what_contributed:
+      insight.what_contributed ??
+      "This is based on computed dataset statistics, not external assumptions.",
+    potential_explanations: insight.potential_explanations ?? [],
+    requires_investigation: insight.requires_investigation ?? false,
+    why_it_matters:
+      insight.why_it_matters ??
+      "This affects how confidently the result should be interpreted.",
+    recommended_action: insight.recommended_action ?? "",
+    category: type,
+    finding: whatHappened,
+    importance: severity,
+    metric: insight.metric ?? "insight",
+    value: insight.value ?? "",
+    column: insight.column,
+    phrased: insight.phrased,
+  };
+}
+
+function normalizeAnalysisResult(result: AnalysisResult): AnalysisResult {
+  const normalizedInsights = (result.insights?.insights ?? []).map(normalizeInsight);
+  const byCategory = INSIGHT_CATEGORIES.reduce(
+    (acc, category) => {
+      acc[category] = normalizedInsights.filter((insight) => insight.category === category);
+      return acc;
+    },
+    {} as Record<InsightCategory, Insight[]>
+  );
+
+  return {
+    ...result,
+    insights: {
+      generatedAt: result.insights?.generatedAt ?? new Date().toISOString(),
+      grounded: true,
+      insights: normalizedInsights,
+      byCategory,
+    },
+  };
+}
+
+function randomId(prefix: string): string {
+  const cryptoObj = typeof crypto !== "undefined" ? crypto : null;
+  if (cryptoObj && "randomUUID" in cryptoObj) {
+    return `${prefix}_${cryptoObj.randomUUID()}`;
+  }
+  return `${prefix}_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
+}
+
+function getStoredId(
+  storage: Storage | null,
+  key: string,
+  prefix: string
+): string {
+  if (typeof window === "undefined") return randomId(prefix);
+  const next = randomId(prefix);
+  if (!storage) return next;
+  try {
+    const existing = storage.getItem(key);
+    if (existing) return existing;
+    storage.setItem(key, next);
+  } catch {
+    return next;
+  }
+  return next;
+}
+
+function getUsageHeaders(): HeadersInit {
+  return {
+    "Content-Type": "application/json",
+    "X-Datanaid-Visitor-Id": getStoredId(
+      typeof window !== "undefined" ? window.localStorage : null,
+      VISITOR_ID_KEY,
+      "visitor"
+    ),
+    "X-Datanaid-Session-Id": getStoredId(
+      typeof window !== "undefined" ? window.sessionStorage : null,
+      SESSION_ID_KEY,
+      "session"
+    ),
+  };
+}
 
 export function AnalysisProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = React.useState<AnalysisState>(initialState);
@@ -49,7 +160,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
     try {
       const res = await fetch("/api/analyze", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: getUsageHeaders(),
         body: JSON.stringify({ dataset, persist }),
       });
       const data = await res.json();
@@ -59,7 +170,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
       }
       setState((s) => ({
         ...s,
-        result: data.result as AnalysisResult,
+        result: normalizeAnalysisResult(data.result as AnalysisResult),
         savedId: data.saved?.id ?? null,
         status: "ready",
         error: null,
@@ -84,7 +195,7 @@ export function AnalysisProvider({ children }: { children: React.ReactNode }) {
       const data = await res.json();
       setState((s) => ({
         ...s,
-        result: data.result as AnalysisResult,
+        result: normalizeAnalysisResult(data.result as AnalysisResult),
         savedId: id,
         status: "ready",
       }));

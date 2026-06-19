@@ -24,6 +24,8 @@ function categoryBadgeVariant(category: InsightCategory): BadgeVariant {
       return "secondary";
     case "trend":
       return "default";
+    case "event":
+      return "outline";
     case "risk":
       return "destructive";
     case "opportunity":
@@ -41,6 +43,8 @@ function categoryBadgeClass(category: InsightCategory): string {
       return "border-transparent bg-success/15 text-success hover:bg-success/25";
     case "recommendation":
       return "border-transparent bg-warning/15 text-warning hover:bg-warning/25";
+    case "event":
+      return "border-transparent bg-primary/10 text-primary hover:bg-primary/20";
     default:
       return "";
   }
@@ -71,15 +75,18 @@ function importanceLabelClass(importance: "high" | "medium" | "low"): string {
 const CATEGORY_LABELS: Record<InsightCategory, string> = {
   finding: "Finding",
   trend: "Trend",
+  event: "Event",
   risk: "Risk",
   opportunity: "Opportunity",
   recommendation: "Recommendation",
 };
 
 export function InsightCard({ insight }: InsightCardProps) {
+  const explanations = insight.potential_explanations ?? [];
+
   return (
     <div className="rounded-xl border border-border bg-card p-5 shadow-sm hover-elevate transition-all duration-150">
-      {/* Header: category badge + importance */}
+      {/* Header: category badge + severity */}
       <div className="mb-3 flex items-center justify-between gap-2">
         <Badge
           variant={categoryBadgeVariant(insight.category)}
@@ -87,18 +94,35 @@ export function InsightCard({ insight }: InsightCardProps) {
         >
           {CATEGORY_LABELS[insight.category]}
         </Badge>
-        <div className={cn("flex items-center gap-1.5 text-xs font-medium", importanceLabelClass(insight.importance))}>
+        <div className={cn("flex items-center gap-1.5 text-xs font-medium", importanceLabelClass(insight.severity))}>
           <span
-            className={cn("inline-block h-1.5 w-1.5 rounded-full", importanceDotClass(insight.importance))}
+            className={cn("inline-block h-1.5 w-1.5 rounded-full", importanceDotClass(insight.severity))}
           />
-          {insight.importance}
+          {insight.severity}
         </div>
       </div>
 
       {/* Main finding */}
+      <h3 className="text-sm font-semibold leading-snug text-foreground">
+        {insight.title}
+      </h3>
       <p className="text-sm font-medium leading-relaxed text-foreground">
-        {insight.finding}
+        {insight.what_happened}
       </p>
+      <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+        {insight.why_it_matters}
+      </p>
+
+      <div className="mt-3 flex flex-wrap gap-2">
+        <Badge variant="outline" className="text-[10px]">
+          {insight.confidence} confidence
+        </Badge>
+        {insight.requires_investigation && (
+          <Badge variant="outline" className="text-[10px] text-warning">
+            needs investigation
+          </Badge>
+        )}
+      </div>
 
       {/* Recommended action */}
       {insight.recommended_action && (
@@ -107,6 +131,19 @@ export function InsightCard({ insight }: InsightCardProps) {
           <p className="text-xs text-foreground/80">{insight.recommended_action}</p>
         </div>
       )}
+
+      <div className="mt-3 rounded-lg border border-border/70 bg-background/50 px-3 py-2.5">
+        <p className="text-xs text-muted-foreground">
+          <span className="font-medium text-foreground">Contributed:</span>{" "}
+          {insight.what_contributed}
+        </p>
+        {explanations.length > 0 && (
+          <p className="mt-1.5 text-xs text-muted-foreground">
+            <span className="font-medium text-foreground">Potential explanation:</span>{" "}
+            {explanations.join(" ")}
+          </p>
+        )}
+      </div>
 
       {/* Evidence + optional AI-phrased badge */}
       <div className="mt-3 flex items-start justify-between gap-2">

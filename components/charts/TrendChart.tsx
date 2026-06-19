@@ -150,7 +150,7 @@ function buildTrendInsight(trend: TrendAnalysis) {
     trend.direction === "up"
       ? `Document this ${growthStr} growth and peak of ${formatCompact(trend.peak.value)} (${trend.peak.period}) in your impact reports and grant applications.`
       : trend.direction === "down"
-      ? `Investigate the trough of ${formatCompact(trend.trough.value)} in ${trend.trough.period} — identify root causes and plan corrective action.`
+      ? `Investigate the trough of ${formatCompact(trend.trough.value)} in ${trend.trough.period} with operational context before planning corrective action.`
       : `Assess whether flat performance in ${trend.metric} reflects saturation or resource constraints and set a target growth rate for the next period.`;
 
   return { what, why, action };

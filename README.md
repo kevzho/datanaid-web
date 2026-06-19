@@ -136,12 +136,28 @@ All variables are **optional for local development**. The app degrades gracefull
 
 | Variable | Required? | Purpose |
 |----------|-----------|---------|
-| `BLOB_READ_WRITE_TOKEN` | Required in production | Vercel Blob token for persisting uploaded datasets and generated reports. Without it, analyses live only in the current session. |
-| `OPENAI_API_KEY` | Optional | Enables LLM **phrasing** of the deterministic insights. Without it, Datanaid uses high-quality deterministic templates. The LLM is strictly constrained to computed statistics — it never introduces new facts. |
-| `OPENAI_MODEL` | Optional | Model used for phrasing only. Defaults to `gpt-4o-mini`. |
+| `BLOB_READ_WRITE_TOKEN` | Required in production | Vercel Blob token for persisting uploaded datasets, generated reports, and anonymous usage events. Without it, analyses live only in the current session and usage events are written to server logs. |
+| `GROQ_API_KEY` | Optional | Enables LLM **phrasing** of the deterministic insights through Groq's OpenAI-compatible API. Without it, Datanaid uses high-quality deterministic templates. The LLM is strictly constrained to computed statistics — it never introduces new facts. |
+| `GROQ_PHRASING_MODEL` | Optional | Groq model used for insight phrasing only. Defaults to `llama-3.1-8b-instant` for free-tier headroom and low latency. |
+| `GROQ_PHRASING_MAX_TOKENS` | Optional | Max output tokens per phrasing call. Defaults to `220`. |
 | `PYTHON_ML_URL` | Optional | URL of the deployed Python forecasting function. Only needed if you host `api/forecast.py` separately from the Next.js app. When unset, the built-in TypeScript linear forecast is used. |
 
 See [`.env.example`](./.env.example) for inline documentation.
+
+### Anonymous usage tracking
+
+Datanaid is free to use and does not require accounts. To understand usage, each
+completed analysis records a small anonymous event:
+
+- anonymous browser visitor id and session id
+- analysis id, timestamp, file extension, row count, and column count
+- counts for insights, trends, forecasts, and risks
+- hashed IP/user-agent metadata for coarse duplicate detection
+
+Raw uploaded rows and cell values are never written to usage events. When
+`BLOB_READ_WRITE_TOKEN` is configured, events are saved under
+`usage-events/YYYY-MM-DD/<analysis-id>.json` in Vercel Blob. Without Blob, events
+are emitted to server logs as `datanaid_usage_event`.
 
 ---
 
@@ -154,14 +170,21 @@ Datanaid's insight engine is **deterministic-first**:
 
    ```json
    {
-     "finding": "Monthly donations grew 34% over the analyzed period.",
-     "evidence": "Total donations rose from $12,400 (Jan) to $16,600 (Jun); avg. period growth 6.1%.",
-     "importance": "high",
-     "recommended_action": "Reinvest in the Q2 outreach channels that drove the increase."
+     "title": "Monthly Donations Structural Trend",
+     "type": "trend",
+     "severity": "high",
+     "confidence": "medium",
+     "what_happened": "Monthly donations increased across the observed period with 67% directional consistency.",
+     "evidence": "First period = $12,400; last period = $16,600; total change = 34%; median period change = 6.1%.",
+     "what_contributed": "This classification is based on repeated period-to-period movement, not only first-versus-last change.",
+     "potential_explanations": ["Campaign timing or seasonality may be associated with the pattern."],
+     "requires_investigation": true,
+     "why_it_matters": "A consistent trend is more decision-useful than a single-period change.",
+     "recommended_action": "Document operational context before setting board-facing targets."
    }
    ```
 
-3. If `OPENAI_API_KEY` is set, the LLM is given **only** these grounded facts and asked to rephrase them more fluidly — under a strict guard that rejects any output introducing numbers or claims not present in the source statistics.
+3. If `GROQ_API_KEY` is set, the LLM is given **only** these grounded facts and asked to rephrase them more fluidly — under a strict guard that rejects any output introducing numbers or claims not present in the source statistics.
 
 Result: polished prose with zero fabricated facts. Without a key, the deterministic templates produce equally grounded (if slightly more formulaic) output.
 
@@ -187,7 +210,7 @@ On Vercel, files under `api/` with a `.py` extension are automatically deployed 
 2. In the [Vercel dashboard](https://vercel.com/new), click **Add New → Project** and import the `datanaid-web` repository.
 3. Vercel auto-detects Next.js — no build settings changes needed.
 4. **Add a Blob store:** in the project, go to **Storage → Create → Blob**. Vercel injects `BLOB_READ_WRITE_TOKEN` automatically. (Or add it manually under **Settings → Environment Variables**.)
-5. *(Optional)* Add `OPENAI_API_KEY` (and `OPENAI_MODEL`) to enable LLM insight phrasing.
+5. *(Optional)* Add `GROQ_API_KEY` (and optionally `GROQ_PHRASING_MODEL`) to enable LLM insight phrasing.
 6. *(Optional)* If you host the Python function separately, add `PYTHON_ML_URL`. For a standard single-project deploy, the Python function deploys automatically alongside the app.
 7. Click **Deploy**.
 

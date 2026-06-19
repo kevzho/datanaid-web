@@ -26,7 +26,7 @@ import { useAnalysis } from "@/lib/store/analysis-store";
 import { downloadMarkdown } from "@/lib/reports/markdown";
 import { printReport } from "@/lib/reports/print";
 import { formatCompact, formatNumber, formatPercentRaw } from "@/lib/utils";
-import type { AnalysisResult } from "@/types/dataset";
+import type { AnalysisResult, Insight } from "@/types/dataset";
 
 /* ── Export toolbar ─────────────────────────────────────────── */
 
@@ -89,19 +89,19 @@ function ReportHeader({ result }: { result: AnalysisResult }) {
 
 function ExecutiveSummary({ result }: { result: AnalysisResult }) {
   const { profile } = result;
-  const topFindings = result.insights.byCategory.finding.slice(0, 3);
-  const trend = result.trends[0];
+  const topFindings = (result.insights.byCategory.finding ?? []).slice(0, 3);
+  const topRisk = (result.insights.byCategory.risk ?? [])[0];
 
   return (
     <section className="space-y-4">
-      <h2 className="text-lg font-semibold text-foreground">Executive summary</h2>
+      <h2 className="text-lg font-semibold text-foreground">Executive Summary</h2>
       <Card>
         <CardContent className="space-y-3 p-6 text-sm leading-relaxed text-muted-foreground">
           <ul className="space-y-2">
             {topFindings.map((f) => (
               <li key={f.id} className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                <span className="text-foreground">{f.finding}</span>
+                <span className="text-foreground">{f.what_happened}</span>
               </li>
             ))}
             <li className="flex gap-2">
@@ -115,18 +115,12 @@ function ExecutiveSummary({ result }: { result: AnalysisResult }) {
                 .
               </span>
             </li>
-            {trend ? (
+            {topRisk ? (
               <li className="flex gap-2">
                 <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span>
-                  {trend.metric}{" "}
-                  {trend.direction === "up"
-                    ? "increased"
-                    : trend.direction === "down"
-                    ? "decreased"
-                    : "held flat"}{" "}
-                  {formatPercentRaw(Math.abs(trend.totalGrowthPct))} across{" "}
-                  {trend.series.length} {trend.granularity}s.
+                  Main risk to note: {topRisk.what_happened} Confidence:{" "}
+                  {topRisk.confidence}.
                 </span>
               </li>
             ) : null}
@@ -146,6 +140,49 @@ function KeyMetrics({ result }: { result: AnalysisResult }) {
   );
 }
 
+function InsightListSection({
+  title,
+  insights,
+}: {
+  title?: string;
+  insights: Insight[];
+}) {
+  if (insights.length === 0) return null;
+  return (
+    <section className="space-y-4">
+      {title ? <h2 className="text-lg font-semibold text-foreground">{title}</h2> : null}
+      <div className="space-y-3">
+        {insights.map((insight) => (
+          <Card key={insight.id}>
+            <CardContent className="space-y-2 p-5 text-sm">
+              <div className="flex flex-wrap items-center gap-2">
+                <h3 className="font-semibold text-foreground">{insight.title}</h3>
+                <Badge variant="outline" className="text-[10px]">
+                  {insight.confidence} confidence
+                </Badge>
+                {insight.requires_investigation ? (
+                  <Badge variant="outline" className="text-[10px] text-warning">
+                    needs investigation
+                  </Badge>
+                ) : null}
+              </div>
+              <p className="text-foreground">{insight.what_happened}</p>
+              <p className="text-xs text-muted-foreground">
+                <span className="font-medium text-foreground">Evidence:</span>{" "}
+                {insight.evidence}
+              </p>
+              <p className="text-xs text-muted-foreground">
+                <span className="font-medium text-foreground">Action:</span>{" "}
+                {insight.recommended_action}
+              </p>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function TrendDirectionIcon({ direction }: { direction: "up" | "down" | "flat" }) {
   if (direction === "up") return <TrendingUp className="h-4 w-4 text-success" />;
   if (direction === "down")
@@ -160,7 +197,7 @@ function TrendsSection({ result }: { result: AnalysisResult }) {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-lg font-semibold text-foreground">Trends over time</h2>
+      <h2 className="text-lg font-semibold text-foreground">Key Trends</h2>
       <TrendChartCard trend={primary} />
       {rest.length > 0 ? (
         <Card>
@@ -195,7 +232,7 @@ function ForecastSection({ result }: { result: AnalysisResult }) {
   if (result.forecasts.length === 0) return null;
   return (
     <section className="space-y-4">
-      <h2 className="text-lg font-semibold text-foreground">Forecast</h2>
+      <h2 className="text-lg font-semibold text-foreground">Forecasts</h2>
       <ForecastChartCard forecast={result.forecasts[0]} />
     </section>
   );
@@ -286,8 +323,43 @@ function AnomaliesSection({ result }: { result: AnalysisResult }) {
   );
 }
 
+function MethodNotesSection({ result }: { result: AnalysisResult }) {
+  const confidenceCounts = result.insights.insights.reduce<Record<string, number>>(
+    (acc, insight) => {
+      acc[insight.confidence] = (acc[insight.confidence] ?? 0) + 1;
+      return acc;
+    },
+    {}
+  );
+  return (
+    <section className="space-y-4">
+      <h2 className="text-lg font-semibold text-foreground">
+        Confidence / Method Notes
+      </h2>
+      <Card>
+        <CardContent className="space-y-3 p-6 text-sm text-muted-foreground">
+          <p>
+            Confidence reflects trend consistency, variance, anomaly counts,
+            missingness, outlier rates, and forecast fit where available.
+          </p>
+          <p>
+            Insight confidence counts: high {confidenceCounts.high ?? 0}, medium{" "}
+            {confidenceCounts.medium ?? 0}, low {confidenceCounts.low ?? 0}.
+          </p>
+          <p>
+            One-period movements are classified as events unless the metric shows
+            repeated movement across multiple periods. Potential explanations are
+            labeled as inferential and require investigation when operational
+            metadata is not present in the uploaded file.
+          </p>
+        </CardContent>
+      </Card>
+    </section>
+  );
+}
+
 function RecommendationsSection({ result }: { result: AnalysisResult }) {
-  const recs = result.insights.byCategory.recommendation;
+  const recs = result.insights.byCategory.recommendation ?? [];
   if (recs.length === 0) return null;
 
   return (
@@ -356,11 +428,25 @@ export default function ReportPage() {
         </div>
 
         <ExecutiveSummary result={result} />
-        <KeyMetrics result={result} />
+        <section className="space-y-4">
+          <h2 className="text-lg font-semibold text-foreground">What Happened</h2>
+          <KeyMetrics result={result} />
+          <InsightListSection title="" insights={result.insights.byCategory.finding ?? []} />
+        </section>
         <TrendsSection result={result} />
+        <InsightListSection
+          title="Notable Events"
+          insights={result.insights.byCategory.event ?? []}
+        />
+        <InsightListSection title="Risks" insights={result.insights.byCategory.risk ?? []} />
+        <InsightListSection
+          title="Opportunities"
+          insights={result.insights.byCategory.opportunity ?? []}
+        />
         <ForecastSection result={result} />
         <AnomaliesSection result={result} />
         <RecommendationsSection result={result} />
+        <MethodNotesSection result={result} />
 
         <Separator />
         <div className="flex items-center gap-2 pb-6 text-xs text-muted-foreground">

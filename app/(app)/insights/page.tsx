@@ -13,6 +13,7 @@ import type { Insight, InsightCategory } from "@/types/dataset";
 const CATEGORY_ORDER: { key: InsightCategory; label: string }[] = [
   { key: "finding", label: "Findings" },
   { key: "trend", label: "Trends" },
+  { key: "event", label: "Events" },
   { key: "risk", label: "Risks" },
   { key: "opportunity", label: "Opportunities" },
   { key: "recommendation", label: "Recommendations" },
@@ -76,10 +77,9 @@ export default function InsightsPage() {
         <div className="flex items-start gap-3 rounded-xl border border-border bg-muted/40 p-4">
           <Sparkles className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
           <p className="text-sm text-muted-foreground">
-            Each insight follows a strict contract — a{" "}
-            <span className="font-medium text-foreground">finding</span>, its{" "}
-            <span className="font-medium text-foreground">evidence</span>, why it{" "}
-            <span className="font-medium text-foreground">matters</span>, and a{" "}
+            Each insight follows a strict contract — what happened, the{" "}
+            <span className="font-medium text-foreground">evidence</span>, confidence,
+            what may require investigation, and a{" "}
             <span className="font-medium text-foreground">recommended action</span>. Every
             number traces back to a value computed directly from your data.
           </p>
@@ -97,7 +97,7 @@ export default function InsightsPage() {
               <TabsTrigger key={c.key} value={c.key} className="gap-1.5">
                 {c.label}
                 <Badge variant="secondary" className="text-[10px]">
-                  {insights.byCategory[c.key].length}
+                  {insights.byCategory[c.key]?.length ?? 0}
                 </Badge>
               </TabsTrigger>
             ))}
@@ -108,7 +108,7 @@ export default function InsightsPage() {
           </TabsContent>
           {categories.map((c) => (
             <TabsContent key={c.key} value={c.key} className="mt-6">
-              <InsightGrid insights={insights.byCategory[c.key]} />
+              <InsightGrid insights={insights.byCategory[c.key] ?? []} />
             </TabsContent>
           ))}
         </Tabs>

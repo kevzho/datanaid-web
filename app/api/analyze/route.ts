@@ -3,6 +3,7 @@ import type { ParsedDataset } from "@/types/dataset";
 import { runAnalysis } from "@/lib/analytics/engine";
 import { phraseInsights } from "@/lib/analytics/llm-phrasing";
 import { saveAnalysis, isBlobConfigured } from "@/lib/storage/blob";
+import { trackAnalysisUsage } from "@/lib/usage/tracking";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -32,7 +33,7 @@ export async function POST(req: NextRequest) {
   try {
     const result = runAnalysis(dataset);
 
-    // Hybrid insight phrasing (server-only; no-op without OPENAI_API_KEY).
+    // Hybrid insight phrasing (server-only; no-op without GROQ_API_KEY).
     const phrased = await phraseInsights(result.insights.insights);
     result.insights.insights = phrased;
     // Rebuild byCategory from phrased insights.
@@ -45,6 +46,20 @@ export async function POST(req: NextRequest) {
     let savedRef = null;
     if (payload.persist && isBlobConfigured()) {
       savedRef = await saveAnalysis(result);
+    }
+
+    try {
+      await trackAnalysisUsage({
+        dataset,
+        result,
+        headers: req.headers,
+        saved: !!savedRef,
+      });
+    } catch (usageErr) {
+      console.warn(
+        "Usage tracking failed",
+        usageErr instanceof Error ? usageErr.message : usageErr
+      );
     }
 
     return NextResponse.json({ result, saved: savedRef, persisted: !!savedRef });
